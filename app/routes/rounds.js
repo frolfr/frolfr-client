@@ -1,4 +1,4 @@
-import AuthenticatedRoute from '/app/routes/authenticated';
+import AuthenticatedRoute from './authenticated';
 import Ember from 'ember';
 
 var RoundsRoute = AuthenticatedRoute.extend({

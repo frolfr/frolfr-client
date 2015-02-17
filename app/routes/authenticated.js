@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ResetScroll from './mixins/reset-scroll';
+import ResetScroll from '../mixins/reset-scroll';
 
 var AuthenticatedRoute = Ember.Route.extend(ResetScroll, {
   beforeModel: function(transition) {

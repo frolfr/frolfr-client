@@ -1,4 +1,4 @@
-import AuthenticatedRoute from '/app/routes/authenticated';
+import AuthenticatedRoute from './authenticated';
 
 var CourseStatLogRoute = AuthenticatedRoute.extend({
   model: function() {

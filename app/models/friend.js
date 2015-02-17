@@ -1,4 +1,4 @@
-import User from '/app/models/user';
+import User from './user';
 
 var Friend = User.extend();
 

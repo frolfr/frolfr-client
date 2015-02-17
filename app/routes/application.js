@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import App from "./app";
+import App from "../app";
 
 var ApplicationRoute = Ember.Route.extend({
   actions: {

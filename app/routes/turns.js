@@ -1,4 +1,4 @@
-import AuthenticatedRoute from '/app/routes/authenticated';
+import AuthenticatedRoute from './authenticated';
 
 var TurnsRoute = AuthenticatedRoute.extend({
   setupController: function(controller, model) {

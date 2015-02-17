@@ -1,4 +1,4 @@
-import Round from '/app/models/round';
+import Round from './round';
 
 var PublicRound = Round.extend();
 

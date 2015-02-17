@@ -1,4 +1,4 @@
-import Course from '/app/models/course';
+import Course from './course';
 
 var AvailableCourse = Course.extend();
 
