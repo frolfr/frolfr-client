@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import Highcharts from 'highcharts';
 
 var ShotBreakdownChartComponent = Ember.Component.extend({
   chartOptions: function() {
@@ -18,7 +19,7 @@ var ShotBreakdownChartComponent = Ember.Component.extend({
         enabled: false
       },
       colors: this.get('colors')
-    }
+    };
   }.property(),
 
   colors: function() {
@@ -44,7 +45,7 @@ var ShotBreakdownChartComponent = Ember.Component.extend({
 
     var data = [eagles, birdies, pars, bogeys, doubles].filter(function(shotData) {
       return shotData.get('lastObject') !== 0;
-    })
+    });
 
     return [{
       type: 'pie',
@@ -58,11 +59,11 @@ var ShotBreakdownChartComponent = Ember.Component.extend({
     chart.series = this.get('series');
     chart.title = '';
 
-    $('.chart').highcharts(chart);
+    Ember.$('.chart').highcharts(chart);
   },
 
   willDestroyElement: function () {
-    $('.chart').highcharts().destroy();
+    Ember.$('.chart').highcharts().destroy();
   }
 });
 

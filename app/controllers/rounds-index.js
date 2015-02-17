@@ -47,7 +47,7 @@ var RoundsIndexController = Ember.ArrayController.extend({
   }.property('sortAscending'),
 
   isFirstPage: function() {
-    return this.get('page') == 1;
+    return this.get('page') === 1;
   }.property('page'),
 
   totalPages: function() {
@@ -55,7 +55,7 @@ var RoundsIndexController = Ember.ArrayController.extend({
   }.property('page', 'perPage', 'arrangedContent.length'),
 
   isLastPage: function() {
-    return this.get('page') == this.get('totalPages');
+    return this.get('page') === this.get('totalPages');
   }.property('page', 'totalPages'),
 
   actions: {

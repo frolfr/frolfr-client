@@ -1,3 +1,6 @@
+import Ember from "ember";
+import EmberUploader from "ember-uploader";
+
 var FileUploadComponent = EmberUploader.FileField.extend({
   url: '',
   imageUrl: null,
@@ -12,7 +15,7 @@ var FileUploadComponent = EmberUploader.FileField.extend({
 
     if (!Ember.isEmpty(files)) {
       uploader.upload(files[0]).then(function(data) {
-        _this.set('imageUrl', data.user.avatar_url)
+        _this.set('imageUrl', data.user.avatar_url);
       });
     }
   }.observes('files')

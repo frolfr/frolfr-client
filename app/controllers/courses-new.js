@@ -16,7 +16,7 @@ var CoursesNewController = Ember.ObjectController.extend({
       course.save().then(function() {
         _this.transitionToRoute('index');
         // TODO: It'd be nice to have some sort of notification
-      })
+      });
     }
   }
 });

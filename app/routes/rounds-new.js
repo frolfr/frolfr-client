@@ -1,4 +1,5 @@
 import AuthenticatedRoute from '/app/routes/authenticated';
+import Ember from 'ember';
 
 var RoundsNewRoute = AuthenticatedRoute.extend({
   model: function() {
@@ -6,7 +7,7 @@ var RoundsNewRoute = AuthenticatedRoute.extend({
   },
   afterModel: function(model) {
     var _this = this;
-    return Promise.all([
+    return Ember.Promise.all([
       this.store.find('availableCourse'),
       this.store.find('friend'),
       this.store.find('user', 'current')

@@ -11,7 +11,7 @@ var LeaderboardController = Ember.ArrayController.extend({
     var uniqueScorecards = [];
 
     playedScorecards.forEach(function(scorecard) {
-      var currentIds = uniqueScorecards.map(function(scorecard){ return scorecard.get('user.id')});
+      var currentIds = uniqueScorecards.map(function(scorecard){ return scorecard.get('user.id');});
       if (!currentIds.contains(scorecard.get('user.id'))) {
         uniqueScorecards.addObject(scorecard);
       }

@@ -24,7 +24,7 @@ var ReviewsIndexController = Ember.ArrayController.extend({
     var sumOfRatings = this.get('filteredReviews').reduce(function (total, review) {
           return total + review.get('rating');
         }, 0),
-        reviewsCount = this.get('filteredReviews').length
+        reviewsCount = this.get('filteredReviews').length;
 
     return sumOfRatings / reviewsCount;
   }.property('filteredReviews.@each.rating'),

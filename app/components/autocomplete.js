@@ -24,7 +24,7 @@ var AutoCompleteComponent = Ember.TextField.extend({
         var lowerQuery = query.toLowerCase();
 
         callback(_this.get('model').filter(function(item) {
-          return _this.format(item).toLowerCase().indexOf(lowerQuery) != -1;
+          return _this.format(item).toLowerCase().indexOf(lowerQuery) !== -1;
         }));
       }
     });

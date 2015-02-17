@@ -1,4 +1,5 @@
 import AuthenticatedRoute from '/app/routes/authenticated';
+import Ember from 'ember';
 
 var RoundsRoute = AuthenticatedRoute.extend({
   model: function() {
@@ -8,7 +9,7 @@ var RoundsRoute = AuthenticatedRoute.extend({
   },
 
   afterModel: function(scorecards) {
-    return Promise.all(scorecards.map(function(s) { return s.get('round'); }));
+    return Ember.Promise.all(scorecards.map(function(s) { return s.get('round'); }));
   }
 });
 

@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ResetScroll from './mixins/reset-scroll';
 
 var AuthenticatedRoute = Ember.Route.extend(ResetScroll, {
   beforeModel: function(transition) {
@@ -12,7 +13,7 @@ var AuthenticatedRoute = Ember.Route.extend(ResetScroll, {
   },
   actions: {
     error: function(reason, transition) {
-      if (reason.status == 401) {
+      if (reason.status === 401) {
         this.redirectToLogin(transition);
       } else {
       }

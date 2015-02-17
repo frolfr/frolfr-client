@@ -33,7 +33,7 @@ var Scorecard = DS.Model.extend({
   isMoreThanOneDayOld: function() {
     var today = new Date().getTime(),
         datePlayed = new Date(this.get('createdAt')).getTime(),
-        oneDayInMilliseconds = 86400000
+        oneDayInMilliseconds = 86400000;
 
     return (today - datePlayed) > oneDayInMilliseconds;
   }.property('createdAt'),
@@ -63,7 +63,7 @@ var Scorecard = DS.Model.extend({
   }.property('playedTurns.@each.par'),
 
   totalShooting: function () {
-    return this.get('totalScore') - this.get('totalPar')
+    return this.get('totalScore') - this.get('totalPar');
   }.property('totalScore', 'totalPar'),
 
   formattedTotals: function () {
