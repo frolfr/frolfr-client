@@ -1,4 +1,6 @@
-App.FriendsRoute = App.AuthenticatedRoute.extend({
+import AuthenticatedRoute from '/app/routes/authenticated';
+
+var FriendsRoute = AuthenticatedRoute.extend({
   model: function() {
     return this.store.find('friend');
   },
@@ -15,3 +17,5 @@ App.FriendsRoute = App.AuthenticatedRoute.extend({
     this.controllerFor('friendableUsers').set('model', this.get('friendableUsers'));
   }
 });
+
+export default FriendsRoute;

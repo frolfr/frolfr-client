@@ -1,4 +1,6 @@
-App.Round = DS.Model.extend({
+import DS from 'ember-data';
+
+var Round = DS.Model.extend({
   courseName: DS.attr('string'),
   createdAt: DS.attr('date'),
   scorecards: DS.hasMany('scorecard', {async: true}),
@@ -16,6 +18,4 @@ App.Round = DS.Model.extend({
   players: DS.hasMany('user', {async: true}),
 });
 
-App.JointRound = App.Round.extend();
-
-App.PublicRound = App.Round.extend();
+export default Round;

@@ -1,4 +1,4 @@
-App.FileUploadComponent = EmberUploader.FileField.extend({
+var FileUploadComponent = EmberUploader.FileField.extend({
   url: '',
   imageUrl: null,
 
@@ -17,3 +17,5 @@ App.FileUploadComponent = EmberUploader.FileField.extend({
     }
   }.observes('files')
 });
+
+export default FileUploadComponent;

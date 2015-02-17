@@ -1,4 +1,6 @@
-App.Turn = DS.Model.extend({
+import DS from 'ember-data';
+
+var Turn = DS.Model.extend({
   score: DS.attr('number'),
   par: DS.attr('number'),
   holeNumber: DS.attr('string'),
@@ -33,3 +35,5 @@ App.Turn = DS.Model.extend({
     }
   }.property('isPlayed', 'score')
 });
+
+export default Turn;

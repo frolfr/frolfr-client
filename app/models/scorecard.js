@@ -1,4 +1,7 @@
-App.Scorecard = DS.Model.extend({
+import DS from 'ember-data';
+import Ember from 'ember';
+
+var Scorecard = DS.Model.extend({
   round: DS.belongsTo('round', { async: true }),
   courseName: DS.attr('string'),
   courseId: DS.attr('number'),
@@ -85,3 +88,5 @@ App.Scorecard = DS.Model.extend({
     return sign + totalShooting;
   }.property('totalScore', 'totalPar', 'totalShooting')
 });
+
+export default Scorecard;

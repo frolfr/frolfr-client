@@ -1,4 +1,6 @@
-App.User = DS.Model.extend({
+import DS from 'ember-data';
+
+var User = DS.Model.extend({
     firstName: DS.attr('string'),
     middleName: DS.attr('string'),
     lastName: DS.attr('string'),
@@ -16,13 +18,10 @@ App.User = DS.Model.extend({
       return !Ember.isEmpty(this.get('avatarUrl'));
     }.property('avatarUrl')
 });
-
-App.Friend = App.User.extend();
-
-App.User.reopenClass({
+User.reopenClass({
   validPassword: function(fields) {
     return fields.password === fields.passwordConfirmation;
   }
 });
 
-App.FriendableUser = App.User.extend();
+export default User;

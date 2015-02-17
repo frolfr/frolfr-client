@@ -1,4 +1,6 @@
-App.AutoCompleteComponent = Ember.TextField.extend({
+import Ember from 'ember';
+
+var AutoCompleteComponent = Ember.TextField.extend({
   selection: null,
   model: null,
   displayKey: null,
@@ -49,3 +51,5 @@ App.AutoCompleteComponent = Ember.TextField.extend({
   }
 
 });
+
+export default AutoCompleteComponent;

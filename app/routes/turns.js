@@ -1,4 +1,6 @@
-App.TurnsRoute = App.AuthenticatedRoute.extend({
+import AuthenticatedRoute from '/app/routes/authenticated';
+
+var TurnsRoute = AuthenticatedRoute.extend({
   setupController: function(controller, model) {
     this._super(controller, model);
 
@@ -21,3 +23,5 @@ App.TurnsRoute = App.AuthenticatedRoute.extend({
     });
   }
 });
+
+export default TurnsRoute;

@@ -1,4 +1,6 @@
-App.Course = DS.Model.extend({
+import DS from 'ember-data';
+
+var Course = DS.Model.extend({
     city: DS.attr('string'),
     state: DS.attr('string'),
     country: DS.attr('string'),
@@ -21,4 +23,4 @@ App.Course = DS.Model.extend({
     }.property('imageUrl')
 });
 
-App.AvailableCourse = App.Course.extend()
+export default Course;

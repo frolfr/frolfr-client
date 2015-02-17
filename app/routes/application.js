@@ -1,8 +1,12 @@
-App.ApplicationRoute = Ember.Route.extend({
+import Ember from 'ember';
+
+var ApplicationRoute = Ember.Route.extend({
   actions: {
     logout: function() {
       this.controllerFor('sessions').reset();
-      App.reset();
+      reset();
     }
   }
 });
+
+export default ApplicationRoute;
