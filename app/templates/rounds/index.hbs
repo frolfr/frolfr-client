@@ -6,17 +6,17 @@
     <thead>
       <tr>
         <th {{action "sortBy" "courseName" on="click"}}>
-          Course 
+          Course
           <i {{bind-attr class="sortCourseName"}}>
           </i>
         </th>
         <th {{action "sortBy" "createdAt" on="click"}}>
-          Date Played 
+          Date Played
           <i {{bind-attr class="sortCreatedAt"}}>
           </i>
         </th>
         <th {{action "sortBy" "totalScore" on="click"}}>
-          Score 
+          Score
           <i {{bind-attr class="sortTotalScore"}}>
           </i>
         </th>
@@ -33,7 +33,7 @@
             {{courseName}}
           </td>
           <td>
-            {{displayDate createdAt}}
+            {{display-date createdAt}}
           </td>
           <td>
             {{formattedTotals}}
@@ -45,7 +45,7 @@
               {{/link-to}}
             {{else}}
               {{#link-to "turns" round nextUnplayedTurn.holeNumber}}
-                Jump to Hole 
+                Jump to Hole
                 {{nextUnplayedTurn.holeNumber}}
               {{/link-to}}
             {{/if}}
@@ -80,9 +80,9 @@
             </div>
           {{/unless}}
           <div class="text-center">
-            Page 
+            Page
             {{page}}
-             of 
+             of
             {{totalPages}}
           </div>
         </td>
