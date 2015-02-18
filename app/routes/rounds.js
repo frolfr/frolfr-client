@@ -9,7 +9,7 @@ var RoundsRoute = AuthenticatedRoute.extend({
   },
 
   afterModel: function(scorecards) {
-    return Ember.Promise.all(scorecards.map(function(s) { return s.get('round'); }));
+    return Ember.RSVP.Promise.all(scorecards.map(function(s) { return s.get('round'); }));
   }
 });
 

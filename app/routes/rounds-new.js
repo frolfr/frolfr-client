@@ -8,7 +8,7 @@ var RoundsNewRoute = AuthenticatedRoute.extend({
 
   afterModel: function() {
     var _this = this;
-    return Ember.Promise.all([
+    return Ember.RSVP.Promise.all([
       this.store.find('availableCourse'),
       this.store.find('friend'),
       this.store.find('user', 'current')
