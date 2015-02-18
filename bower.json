@@ -15,7 +15,6 @@
     "moment": "~2.9.0",
     "highcharts": "~4.1.1",
     "ember-uploader": "~0.3.4",
-    "bootstrap": "~3.3.2",
     "emblem": "~0.3.18",
     "jquery-cookie": "~1.4.1"
   }
