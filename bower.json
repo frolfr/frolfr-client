@@ -17,6 +17,7 @@
     "ember-uploader": "~0.3.4",
     "emblem": "~0.3.18",
     "jquery-cookie": "~1.4.1",
-    "bootstrap-sass-official": "~3.3.3"
+    "bootstrap-sass-official": "~3.3.3",
+    "typeahead.js": "~0.10.5"
   }
 }
