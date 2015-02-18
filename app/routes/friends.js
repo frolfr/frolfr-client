@@ -5,7 +5,7 @@ var FriendsRoute = AuthenticatedRoute.extend({
     return this.store.find('friend');
   },
 
-  afterModel: function(model) {
+  afterModel: function() {
     var _this = this;
     return this.store.find('friendableUser').then(function(friendableUsers) {
       _this.set('friendableUsers', friendableUsers);

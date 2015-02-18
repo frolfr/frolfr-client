@@ -13,9 +13,9 @@ var TurnsController = Ember.ArrayController.extend({
     return this.get('holeNumber') === this.get('holeCount');
   }.property('holeNumber', 'finalHoleNumber'),
 
-  isPar3: function() { return this.get('holePar') == 3; }.property('holePar'),
-  isPar4: function() { return this.get('holePar') == 4; }.property('holePar'),
-  isPar5: function() { return this.get('holePar') == 5; }.property('holePar'),
+  isPar3: function() { return this.get('holePar') === 3; }.property('holePar'),
+  isPar4: function() { return this.get('holePar') === 4; }.property('holePar'),
+  isPar5: function() { return this.get('holePar') === 5; }.property('holePar'),
 
   actions: {
     previousHole: function() {
@@ -38,7 +38,7 @@ var TurnsController = Ember.ArrayController.extend({
         _this.transitionToRoute('round', roundId);
       } else {
         _this.transitionToRoute('turns', roundId, holeNumber);
-      };
+      }
     },
 
     addOne: function(turn) {
@@ -73,7 +73,7 @@ var TurnsController = Ember.ArrayController.extend({
       this.get('model').forEach(function(turn) {
         if (turn.get('isDirty')) {
           turn.save();
-        };
+        }
       });
     }
   }

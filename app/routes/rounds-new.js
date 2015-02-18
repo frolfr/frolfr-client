@@ -5,7 +5,8 @@ var RoundsNewRoute = AuthenticatedRoute.extend({
   model: function() {
     return this.store.createRecord('round');
   },
-  afterModel: function(model) {
+
+  afterModel: function() {
     var _this = this;
     return Ember.Promise.all([
       this.store.find('availableCourse'),

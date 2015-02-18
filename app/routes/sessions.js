@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var SessionsRoute = Ember.Route.extend({
-  setupController: function(controller, context) {
+  setupController: function(controller) {
     controller.reset();
   }
 });

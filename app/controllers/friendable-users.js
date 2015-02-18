@@ -16,7 +16,7 @@ var FriendableUsersController = Ember.ArrayController.extend({
         this.get("selection").toJSON({includeId: true})
       );
 
-      newFriend.save().then(function(savedFriend) {
+      newFriend.save().then(function() {
         // This user is now our friend, so remove them from the list of friendable users
         var selectedUser = _this.store.find('friendableUser', _this.get('selection.id'));
         selectedUser.then(function(selectedUser) {

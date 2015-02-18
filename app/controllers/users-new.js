@@ -19,7 +19,7 @@ var UsersNewController = Ember.Controller.extend({
           self.get('controllers.sessions').send("loginWithCredentials", email, password);
         });
       } else {
-        this.set('showPasswordError', true)
+        this.set('showPasswordError', true);
       }
     }
   }
