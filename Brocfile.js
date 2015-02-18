@@ -3,6 +3,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
+var pickFiles = require('broccoli-static-compiler');
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -19,4 +20,11 @@ var app = new EmberApp();
 app.import('bower_components/moment/moment.js');
 app.import('bower_components/jquery-cookie/jquery.cookie.js');
 
-module.exports = app.toTree();
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+var bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts', {
+    srcDir: '/',
+    destDir: '/fonts'
+});
+
+module.exports = app.toTree([bootstrapFonts]);
