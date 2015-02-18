@@ -1,0 +1,41 @@
+{{#if model}}
+  <h2 class="text-center">
+    Courses
+  </h2>
+  <table id="courses" class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Location
+        </th>
+        <th>
+          Rounds
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each course in controller}}
+        <tr>
+          <td>
+            {{#link-to "courseStatLog" course}}
+              {{course.name}}
+            {{/link-to}}
+          </td>
+          <td>
+            {{course.location}}
+          </td>
+          <td>
+            {{course.roundsPlayed}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <h2>
+    Welcome to Frolfr!
+  </h2>
+{{/if}}

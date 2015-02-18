@@ -1,0 +1,27 @@
+<h2 class="text-center">
+  Log In
+</h2>
+<form {{action "login" on="submit"}}>
+  <div class="form-group">
+    <label for="email">
+      * Email
+    </label>
+    {{input value=email type="text" id="email" classNames="form-control"}}
+  </div>
+  <div class="form-group">
+    <label for="password">
+      * Password
+    </label>
+    {{input value=password type="password" id="password" classNames="form-control"}}
+  </div>
+  <button type="submit" class="btn btn-block btn-primary btn-lg">
+    Log In
+  </button>
+</form>
+<p>
+  New to Frolfr? 
+  {{link-to "Sign Up" "users.new"}}
+</p>
+<p>
+  {{link-to "Forgot your Password?" "password.reset"}}
+</p>

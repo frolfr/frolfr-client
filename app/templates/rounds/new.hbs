@@ -1,0 +1,64 @@
+<h2 class="text-center">
+  Start a New Round
+</h2>
+<form {{action "createRound" on="submit"}}>
+  <fieldset>
+    <div class="form-group">
+      <label for="course">
+        * Course
+      </label>
+      {{view Ember.Select content=courses selection=course.content optionValuePath="content.id" optionLabelPath="content.name" prompt="Select Course" id="course" required=true classNames="form-control"}}
+    </div>
+    <p>
+      Can't see the course you're looking for? Why not 
+      {{link-to "suggest a new course?" "courses.new"}}
+    </p>
+    <div class="form-group">
+      <label for="players">
+        Players
+      </label>
+      <div class="row">
+        <div class="col-xs-9 form-group">
+          {{auto-complete id="players" model=potentialPlayers selection=selectedPlayer value=query displayKey="fullName"}}
+        </div>
+        <div class="col-xs-3">
+          <button {{action addPlayer}} {{bind-attr disabled="noPlayerSelected"}} class="btn btn-block btn-lg btn-success">
+            <span class="glyphicon glyphicon-plus">
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row block-grid-xs-3 block-grid-sm-4 block-grid-lg-6">
+      <div class="block-grid-item">
+        {{#if currentUser.hasAvatar}}
+          <img {{bind-attr src="currentUser.avatarUrl"}} class="u-circle friend-avatar" />
+        {{else}}
+          <img src="http://xcellis.com/wp-content/uploads/2013/09/avatar-placeholder.png" class="u-circle friend-avatar" />
+        {{/if}}
+        <div class="text-center">
+          {{currentUser.fullName}}
+        </div>
+      </div>
+      {{#each players}}
+        <div class="block-grid-item">
+          {{#if hasAvatar}}
+            <img {{bind-attr src="avatarUrl"}} class="u-circle friend-avatar" />
+          {{else}}
+            <img src="http://xcellis.com/wp-content/uploads/2013/09/avatar-placeholder.png" class="u-circle friend-avatar" />
+          {{/if}}
+          <div class="text-center">
+            {{fullName}}
+          </div>
+          <button {{action removePlayer this}} class="btn btn-block btn-danger">
+            <span class="glyphicon glyphicon-minus">
+            </span>
+          </button>
+        </div>
+      {{/each}}
+    </div>
+    <button type="submit" class="btn btn-block btn-lg btn-primary">
+      Start Round
+    </button>
+  </fieldset>
+</form>

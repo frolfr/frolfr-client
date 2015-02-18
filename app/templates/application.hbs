@@ -1,0 +1,54 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  {{link-to "Frolfr" "index" classNames="navbar-brand" id="title"}}
+</div>
+<section class="main-section">
+  <div class="container">
+    {{outlet}}
+  </div>
+</section>
+{{#if currentUser.isAuthenticated}}
+  <div id="footer">
+    <div class="btn-group btn-group-lg btn-group-justified">
+      {{#link-to "rounds.new" classNames="btn"}}
+        <span class="glyphicon glyphicon-plus">
+        </span>
+        <br />
+        <label class="hidden-xs u-pointer">
+          New Round
+        </label>
+      {{/link-to}}
+      {{#link-to "rounds.index" classNames="btn"}}
+        <i class="fa fa-info-circle">
+        </i>
+        <br />
+        <label class="hidden-xs u-pointer">
+          Rounds
+        </label>
+      {{/link-to}}
+      {{#link-to "courses.index" classNames="btn"}}
+        <i class="fa fa-map-marker">
+        </i>
+        <br />
+        <label class="hidden-xs u-pointer">
+          Courses
+        </label>
+      {{/link-to}}
+      {{#link-to "friends" classNames="btn"}}
+        <i class="fa fa-users">
+        </i>
+        <br />
+        <label class="hidden-xs u-pointer">
+          Friends
+        </label>
+      {{/link-to}}
+      {{#link-to "profile" classNames="btn"}}
+        <span class="glyphicon glyphicon-heart">
+        </span>
+        <br />
+        <label class="hidden-xs u-pointer">
+          Profile
+        </label>
+      {{/link-to}}
+    </div>
+  </div>
+{{/if}}

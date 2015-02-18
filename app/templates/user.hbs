@@ -1,0 +1,29 @@
+<h2 class="text-center">
+  {{fullName}}
+</h2>
+{{#if hasAvatar}}
+  <div class="text-center">
+    <img {{bind-attr src="avatarUrl"}} class="avatar u-circle" />
+  </div>
+{{/if}}
+<div class="nav nav-pills nav-justified push-down">
+  {{#link-to "userStatLog" this tagName="li" classNames="u-pointer"}}
+    <a>
+      <span class="hidden-xs">
+        Stats
+      </span>
+      <i class="fa fa-bar-chart visible-xs">
+      </i>
+    </a>
+  {{/link-to}}
+  {{#link-to "jointRounds" this tagName="li" classNames="u-pointer"}}
+    <a>
+      <span class="hidden-xs">
+        Rounds
+      </span>
+      <i class="fa fa-info-circle visible-xs">
+      </i>
+    </a>
+  {{/link-to}}
+</div>
+{{outlet}}

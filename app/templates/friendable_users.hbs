@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-9">
+    {{auto-complete model=controller selection=selection value=query displayKey="fullName" class="larger-input"}}
+  </div>
+  <div class="col-xs-3">
+    <button {{action addFriend}} {{bind-attr disabled="noUserSelected"}} class="btn btn-block btn-lg btn-success">
+      <span class="glyphicon glyphicon-plus">
+      </span>
+    </button>
+  </div>
+</div>

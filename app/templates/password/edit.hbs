@@ -1,0 +1,27 @@
+<h2 class="text-center">
+  Change Password
+</h2>
+<form {{action "changePassword" on="submit"}}>
+  <fieldset>
+    <div class="form-group">
+      <label for="password">
+        * Password
+      </label>
+      {{input value=password type="password" id="password" required=true classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirmation">
+        * Password Confirmation
+      </label>
+      {{input value=passwordConfirmation type="password" id="passwordConfirmation" required=true classNames="form-control"}}
+    </div>
+    {{#if showPasswordError}}
+      <p>
+        Password and confirmation must match
+      </p>
+    {{/if}}
+  </fieldset>
+  <button type="submit" class="btn btn-block btn-lg btn-primary">
+    Change Password
+  </button>
+</form>

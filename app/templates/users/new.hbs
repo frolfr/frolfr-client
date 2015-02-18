@@ -1,0 +1,51 @@
+<h2 class="text-center">
+  Sign Up
+</h2>
+<form {{action "createUser" on="submit"}}>
+  <fieldset>
+    <div class="form-group">
+      <label for="firstName">
+        * First Name
+      </label>
+      {{input value=fields.firstName type="text" id="firstName" required=true classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="middleName">
+        Middle Name
+      </label>
+      {{input value=fields.middleName type="text" id="middleName" classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="lastName">
+        * Last Name
+      </label>
+      {{input value=fields.lastName type="text" id="lastName" required=true classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="email">
+        * Email
+      </label>
+      {{input value=fields.email type="text" id="email" required=true classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="password">
+        * Password
+      </label>
+      {{input value=fields.password type="password" id="password" required=true classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirmation">
+        * Password Confirmation
+      </label>
+      {{input value=fields.passwordConfirmation type="password" id="passwordConfirmation" required=true classNames="form-control"}}
+    </div>
+    {{#if showPasswordError}}
+      <p>
+        Password and confirmation must match
+      </p>
+    {{/if}}
+  </fieldset>
+  <button type="submit" class="btn btn-block btn-primary btn-lg">
+    Sign Up
+  </button>
+</form>

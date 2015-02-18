@@ -1,0 +1,12 @@
+<h3 class="visible-xs text-center">
+  Photos
+</h3>
+<div class="text-center">
+  {{#if hasImage}}
+    <img {{bind-attr src="imageUrl"}} />
+  {{else}}
+    <p>
+      No photos currently available!
+    </p>
+  {{/if}}
+</div>

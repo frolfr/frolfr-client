@@ -1,0 +1,40 @@
+{{#if model}}
+  <h3 class="text-center visible-xs">
+    Rounds Played Together
+  </h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Course Name
+        </th>
+        <th>
+          Date Played
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model}}
+        <tr>
+          <td>
+            {{courseName}}
+          </td>
+          <td>
+            {{displayDate createdAt}}
+          </td>
+          <td>
+            {{#link-to "round" this}}
+              Recap
+            {{/link-to}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>
+    You two haven't played any rounds together! Get discin'!
+  </p>
+{{/if}}

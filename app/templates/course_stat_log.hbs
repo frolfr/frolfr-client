@@ -1,0 +1,35 @@
+<h3 class="visible-xs text-center">
+  Stats
+</h3>
+<ul class="list-group">
+  <li class="list-group-item">
+    <span class="pull-right">
+      {{totalScorecardsPlayed}}
+    </span>
+    Total Scorecards Played
+  </li>
+  <li class="list-group-item">
+    <span class="pull-right">
+      {{completedScorecardsPlayed}}
+    </span>
+    Completed Scorecards Played
+  </li>
+  <li class="list-group-item">
+    <span class="pull-right">
+      {{averageScoreOnCompletedScorecards}}
+    </span>
+    Average Score
+  </li>
+  <li class="list-group-item">
+    <span class="pull-right">
+      {{bestScoreOnCompletedScorecards}}
+    </span>
+    Best Score
+  </li>
+</ul>
+<h3 class="text-center">
+  Shot Breakdown
+</h3>
+<div class="chart">
+</div>
+{{shot-breakdown-chart pars=totalPars birdies=totalBirdies bogeys=totalBogeys eagles=totalEagles doubles=totalDoublesOrWorse}}

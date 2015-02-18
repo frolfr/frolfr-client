@@ -1,0 +1,38 @@
+<h3 class="visible-xs text-center">
+  Leaderboard
+</h3>
+<table id="rounds" class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+      </th>
+      <th>
+        Player
+      </th>
+      <th>
+        Date Played
+      </th>
+      <th>
+        Score
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each filtered}}
+      <tr>
+        <td>
+          {{rankingFromIndex _view.contentIndex}}
+        </td>
+        <td>
+          {{userFullName}}
+        </td>
+        <td>
+          {{displayDate createdAt}}
+        </td>
+        <td>
+          {{formattedTotals}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
