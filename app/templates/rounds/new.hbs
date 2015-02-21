@@ -22,7 +22,7 @@
           {{auto-complete id="players" model=potentialPlayers selection=selectedPlayer value=query displayKey="fullName"}}
         </div>
         <div class="col-xs-3">
-          <button {{action addPlayer}} {{bind-attr disabled="noPlayerSelected"}} class="btn btn-block btn-lg btn-success">
+          <button {{action 'addPlayer'}} {{bind-attr disabled="noPlayerSelected"}} class="btn btn-block btn-lg btn-success">
             <span class="glyphicon glyphicon-plus">
             </span>
           </button>
@@ -50,7 +50,7 @@
           <div class="text-center">
             {{fullName}}
           </div>
-          <button {{action removePlayer this}} class="btn btn-block btn-danger">
+          <button {{action 'removePlayer' this}} class="btn btn-block btn-danger">
             <span class="glyphicon glyphicon-minus">
             </span>
           </button>
