@@ -9,7 +9,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
       'style-src': "'self' http://fonts.googleapis.com",
-      'img-src': "'self' https://s3.amazonaws.com"
+      'img-src': "'self' https://s3.amazonaws.com http://res.cloudinary.com/frolfr/image/upload/ http://xcellis.com/wp-content/uploads/2013/09/avatar-placeholder.png"
     },
     EmberENV: {
       FEATURES: {
