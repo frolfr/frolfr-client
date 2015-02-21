@@ -20,7 +20,7 @@ var pickFiles = require('broccoli-static-compiler');
 app.import('bower_components/moment/moment.js');
 app.import('bower_components/jquery-cookie/jquery.cookie.js');
 app.import('bower_components/typeahead.js/dist/typeahead.jquery.js');
-
+app.import('bower_components/highcharts/highcharts.js');
 app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
 app.import('bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss');
 var bootstrapFonts = pickFiles('bower_components/bootstrap-sass-official/assets/fonts', {

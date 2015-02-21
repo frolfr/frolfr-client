@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import Highcharts from 'highcharts';
 
 var ShotBreakdownChartComponent = Ember.Component.extend({
   chartOptions: function() {
