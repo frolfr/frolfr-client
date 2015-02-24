@@ -15,7 +15,7 @@ var Round = DS.Model.extend({
   }.property('scorecards.@each.isStarted'),
 
   // only used for creating new rounds
-  players: DS.hasMany('user', {async: true}),
+  players: DS.hasMany('friend', {async: true}),
 });
 
 export default Round;

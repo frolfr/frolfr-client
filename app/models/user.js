@@ -9,7 +9,6 @@ var User = DS.Model.extend({
     password: DS.attr('string'),
     passwordConfirmation: DS.attr('string'),
     avatarUrl: DS.attr('string'),
-    reviews: DS.hasMany('review', { async: true }),
     fullName: function() {
       return this.get('firstName') + " " + this.get('lastName');
     }.property("firstName", "lastName"),
