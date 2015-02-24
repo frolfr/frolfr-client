@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import User from '/app/models/user';
+import User from '../../models/user';
 
 var UsersNewController = Ember.Controller.extend({
   needs: "sessions",
