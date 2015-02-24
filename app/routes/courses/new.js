@@ -1,4 +1,4 @@
-import AuthenticatedRoute from './authenticated';
+import AuthenticatedRoute from '.././authenticated';
 
 var CoursesNewRoute = AuthenticatedRoute.extend({
   model: function() {
