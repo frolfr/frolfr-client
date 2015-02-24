@@ -1,3 +1,4 @@
+/* global Highcharts */
 import Ember from 'ember';
 
 var ShotBreakdownChartComponent = Ember.Component.extend({
