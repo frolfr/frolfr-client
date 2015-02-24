@@ -7,7 +7,7 @@
       <label for="course">
         * Course
       </label>
-      {{view Ember.Select content=courses selection=course.content optionValuePath="content.id" optionLabelPath="content.name" prompt="Select Course" id="course" required=true classNames="form-control"}}
+      {{view "select" content=courses selection=course.content optionValuePath="content.id" optionLabelPath="content.name" prompt="Select Course" id="course" required=true classNames="form-control"}}
     </div>
     <p>
       Can't see the course you're looking for? Why not
