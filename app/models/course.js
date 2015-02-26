@@ -20,7 +20,7 @@ var Course = DS.Model.extend({
     }.property('status'),
 
     hasImage: function() {
-        return !Ember.isEmpty(this.get('imageUrl'));
+        return Ember.isPresent(this.get('imageUrl'));
     }.property('imageUrl')
 });
 

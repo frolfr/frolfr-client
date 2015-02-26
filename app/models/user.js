@@ -15,7 +15,7 @@ var User = DS.Model.extend({
     scorecards: DS.hasMany('scorecard', { async: true }),
 
     hasAvatar: function() {
-      return !Ember.isEmpty(this.get('avatarUrl'));
+      return Ember.isPresent(this.get('avatarUrl'));
     }.property('avatarUrl')
 });
 User.reopenClass({

@@ -13,7 +13,7 @@ var FileUploadComponent = EmberUploader.FileField.extend({
     });
     var _this = this;
 
-    if (!Ember.isEmpty(files)) {
+    if (Ember.isPresent(files)) {
       uploader.upload(files[0]).then(function(data) {
         _this.set('imageUrl', data.user.avatar_url);
       });

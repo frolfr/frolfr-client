@@ -24,8 +24,7 @@ var Turn = DS.Model.extend({
   }.property('score', 'par'),
 
   isPlayed: function() {
-    return !Ember.isEmpty(this.get('score'));
-    // TODO: Ember 1.7 has isPresent; change on update
+    return Ember.isPresent(this.get('score'));
   }.property('score'),
 
   displayScore: function() {

@@ -11,7 +11,7 @@ var FriendableUser = DS.Model.extend({
       return this.get('firstName') + " " + this.get('lastName');
     }.property("firstName", "lastName"),
     hasAvatar: function() {
-      return !Ember.isEmpty(this.get('avatarUrl'));
+      return Ember.isPresent(this.get('avatarUrl'));
     }.property('avatarUrl')
 });
 
