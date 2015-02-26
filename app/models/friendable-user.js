@@ -6,6 +6,7 @@ var FriendableUser = DS.Model.extend({
     middleName: DS.attr('string'),
     lastName: DS.attr('string'),
     email: DS.attr('string'),
+    avatarUrl: DS.attr('string'),
     fullName: function() {
       return this.get('firstName') + " " + this.get('lastName');
     }.property("firstName", "lastName"),
