@@ -1,5 +1,5 @@
 import Ember from "ember";
-import EmberUploader from "ember-uploader";
+/* global EmberUploader */
 
 var FileUploadComponent = EmberUploader.FileField.extend({
   url: '',
