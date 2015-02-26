@@ -40,17 +40,17 @@
           {{currentUser.fullName}}
         </div>
       </div>
-      {{#each players}}
+      {{#each player in players}}
         <div class="block-grid-item">
-          {{#if hasAvatar}}
-            <img {{bind-attr src="avatarUrl"}} class="u-circle friend-avatar" />
+          {{#if player.hasAvatar}}
+            <img {{bind-attr src="player.avatarUrl"}} class="u-circle friend-avatar" />
           {{else}}
             <img src="http://xcellis.com/wp-content/uploads/2013/09/avatar-placeholder.png" class="u-circle friend-avatar" />
           {{/if}}
           <div class="text-center">
-            {{fullName}}
+            {{player.fullName}}
           </div>
-          <button {{action 'removePlayer' this}} class="btn btn-block btn-danger">
+          <button {{action 'removePlayer' player}} class="btn btn-block btn-danger">
             <span class="glyphicon glyphicon-minus">
             </span>
           </button>

@@ -19,36 +19,36 @@
     </div>
   </div>
 </div>
-{{#each controller}}
+{{#each turn in controller}}
   <div class="media">
     <div class="media-left media-middle">
-      {{#if scorecard.hasUserAvatar}}
-        <img {{bind-attr src="scorecard.userAvatarUrl"}} class="media-object thumbnail u-circle" />
+      {{#if turn.scorecard.hasUserAvatar}}
+        <img {{bind-attr src="turn.scorecard.userAvatarUrl"}} class="media-object thumbnail u-circle" />
       {{else}}
         <h2 class="media-object">
-          {{scorecard.userInitials}}
+          {{turn.scorecard.userInitials}}
         </h2>
       {{/if}}
     </div>
     <div class="media-body row">
       <div class="vertical-align">
-        <button {{action "subtractOne" this on="click"}} class="btn btn-primary col-xs-3 text-center u-condensed btn-lg">
+        <button {{action "subtractOne" turn on="click"}} class="btn btn-primary col-xs-3 text-center u-condensed btn-lg">
           <span class="glyphicon glyphicon-minus">
           </span>
         </button>
         <div class="col-xs-3">
-          <h3 {{bind-attr class=":text-center parStatus"}}>
-            {{displayScore}}
+          <h3 {{bind-attr class=":text-center turn.parStatus"}}>
+            {{turn.displayScore}}
           </h3>
         </div>
-        <button {{action "addOne" this on="click"}} class="btn btn-primary col-xs-3 text-center u-condensed btn-lg">
+        <button {{action "addOne" turn on="click"}} class="btn btn-primary col-xs-3 text-center u-condensed btn-lg">
           <span class="glyphicon glyphicon-plus">
           </span>
         </button>
         <div class="col-xs-3 text-center">
           <div class="pull-right">
             <div class="pull-left total">
-              {{scorecard.formattedTotals}}
+              {{turn.scorecard.formattedTotals}}
             </div>
           </div>
         </div>

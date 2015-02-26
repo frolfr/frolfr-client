@@ -16,16 +16,16 @@
       </tr>
     </thead>
     <tbody>
-      {{#each model}}
+      {{#each round in model}}
         <tr>
           <td>
-            {{courseName}}
+            {{round.courseName}}
           </td>
           <td>
-            {{display-date createdAt}}
+            {{display-date round.createdAt}}
           </td>
           <td>
-            {{#link-to "round" this}}
+            {{#link-to "round" round}}
               Recap
             {{/link-to}}
           </td>

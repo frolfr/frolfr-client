@@ -18,19 +18,19 @@
     </tr>
   </thead>
   <tbody>
-    {{#each filtered}}
+    {{#each scorecard in filtered}}
       <tr>
         <td>
           {{ranking-from-index _view.contentIndex}}
         </td>
         <td>
-          {{userFullName}}
+          {{scorecard.userFullName}}
         </td>
         <td>
-          {{display-date createdAt}}
+          {{display-date scorecard.createdAt}}
         </td>
         <td>
-          {{formattedTotals}}
+          {{scorecard.formattedTotals}}
         </td>
       </tr>
     {{/each}}

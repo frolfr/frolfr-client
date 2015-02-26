@@ -11,26 +11,26 @@
     {{/unless}}
   </div>
   <ul class="push-down list-unstyled">
-    {{#each filteredReviews}}
+    {{#each review in filteredReviews}}
       <li class='review'>
         <div class='review-header'>
           <div>
-            {{#if user.hasAvatar}}
-             <img class='u-circle tiny-thumbnail' {{bind-attr src='user.avatarUrl'}} />
+            {{#if review.user.hasAvatar}}
+             <img class='u-circle tiny-thumbnail' {{bind-attr src='review.user.avatarUrl'}} />
             {{else}}
               <img class='u-circle tiny-thumbnail' src='http://xcellis.com/wp-content/uploads/2013/09/avatar-placeholder.png'>
             {{/if}}
             <div class='pull-right'>
-              <strong class='pull-right'>{{rating}} / 10</strong>
+              <strong class='pull-right'>{{review.rating}} / 10</strong>
             </div>
           </div>
           <div>
-            <strong>{{userFullName}}</strong> reviewed on {{display-date createdAt}}
+            <strong>{{review.userFullName}}</strong> reviewed on {{display-date review.createdAt}}
           </div>
         </div>
 
         <div class='review-body'>
-          {{post}}
+          {{review.post}}
         </div>
       </li>
     {{/each}}

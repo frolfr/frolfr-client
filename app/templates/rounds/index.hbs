@@ -27,32 +27,32 @@
       </tr>
     </thead>
     <tbody>
-      {{#each pagedContent}}
+      {{#each scorecard in pagedContent}}
         <tr>
           <td>
-            {{courseName}}
+            {{scorecard.courseName}}
           </td>
           <td>
-            {{display-date createdAt}}
+            {{display-date scorecard.createdAt}}
           </td>
           <td>
-            {{formattedTotals}}
+            {{scorecard.formattedTotals}}
           </td>
           <td>
-            {{#if isFinished}}
-              {{#link-to "round" round}}
+            {{#if scorecard.isFinished}}
+              {{#link-to "round" scorecard.round}}
                 Recap
               {{/link-to}}
             {{else}}
-              {{#link-to "turns" round nextUnplayedTurn.holeNumber}}
+              {{#link-to "turns" scorecard.round scorecard.nextUnplayedTurn.holeNumber}}
                 Jump to Hole
-                {{nextUnplayedTurn.holeNumber}}
+                {{scorecard.nextUnplayedTurn.holeNumber}}
               {{/link-to}}
             {{/if}}
           </td>
           <td>
-            {{#unless round.isStarted}}
-              <a {{action "deleteRound" round on="click"}}>
+            {{#unless scorecard.round.isStarted}}
+              <a {{action "deleteRound" scorecard.round on="click"}}>
                 Delete Round
               </a>
             {{/unless}}
