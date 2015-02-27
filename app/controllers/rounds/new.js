@@ -5,9 +5,9 @@ var RoundsNewController = Ember.ObjectController.extend({
   query: null,
 
   potentialPlayers: function() {
-    var friends = new Ember.Set(this.get('friends'));
-    var players = new Ember.Set(this.get('players'));
-    friends.removeObjects(players);
+    var friends = this.get('friends');
+    var players = this.get('players');
+    players.forEach(function(p) { friends.removeObject(p); });
 
     return friends;
   }.property('friends.@each', 'players.@each'),
