@@ -20,8 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
-    "broccoli-static-compiler": "^0.2.1",
     "broccoli-sass": "git://github.com/aexmachina/broccoli-sass#sources-content",
+    "broccoli-static-compiler": "^0.2.1",
     "ember-cli": "0.2.0-beta.1",
     "ember-cli-app-version": "0.3.1",
     "ember-cli-babel": "^4.0.0",
@@ -33,6 +33,9 @@
     "ember-cli-qunit": "0.3.8",
     "ember-cli-uglify": "1.0.1",
     "ember-data": "1.0.0-beta.15",
+    "ember-deploy": "^0.3.1",
+    "ember-deploy-s3": "0.0.3",
+    "ember-deploy-s3-index": "^0.2.0",
     "ember-export-application-global": "^1.0.2",
     "express": "^4.8.5",
     "glob": "^4.0.5"

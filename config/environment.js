@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    apiHost: '',
     contentSecurityPolicy: {
       'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
       'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline'",
@@ -45,7 +46,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = "https://frolfr.herokuapp.com";
   }
 
   return ENV;

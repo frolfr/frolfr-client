@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import config from 'frolfr-client/config/environment';
 
 var SessionsController = Ember.Controller.extend({
   needs: ['currentUser'],
@@ -50,7 +51,7 @@ var SessionsController = Ember.Controller.extend({
       // clear form fields
       this.setProperties({email: null, password: null});
 
-      Ember.$.post('/api/authorizations', data).then(function(response) {
+      Ember.$.post(config.apiHost + '/api/authorizations', data).then(function(response) {
         _this.setupAuthHeader(response.token, data.email);
 
         _this.setProperties({
