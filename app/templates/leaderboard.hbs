@@ -15,10 +15,13 @@
       <th>
         Score
       </th>
+      <th>
+        Shooting
+      </th>
     </tr>
   </thead>
   <tbody>
-    {{#each scorecard in filtered}}
+    {{#each scorecard in model}}
       <tr>
         <td>
           {{ranking-from-index _view.contentIndex}}
@@ -30,7 +33,10 @@
           {{display-date scorecard.createdAt}}
         </td>
         <td>
-          {{scorecard.formattedTotals}}
+          {{scorecard.totalScore}}
+        </td>
+        <td>
+          {{scorecard.formattedTotalShooting}}
         </td>
       </tr>
     {{/each}}

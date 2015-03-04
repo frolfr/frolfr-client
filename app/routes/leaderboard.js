@@ -2,7 +2,7 @@ import AuthenticatedRoute from './authenticated';
 
 var LeaderboardRoute = AuthenticatedRoute.extend({
   model: function() {
-    return this.modelFor('course').get('scorecards');
+    return this.store.find('leaderboardScorecard', { course_id: this.modelFor('course').id });
   }
 });
 
