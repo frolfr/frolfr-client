@@ -7,17 +7,17 @@
     <table id="rounds" class="table table-striped">
       <thead>
         <tr>
-          <th {{action "sortBy" "createdAt" on="click"}}>
+          <th {{action "sortBy" "createdAt"}}>
             Date Played
             <i {{bind-attr class="sortCreatedAt"}}>
             </i>
           </th>
-          <th {{action "sortBy" "totalScore" on="click"}}>
+          <th {{action "sortBy" "totalScore"}}>
             Score
             <i {{bind-attr class="sortTotalScore"}}>
             </i>
           </th>
-          <th {{action "sortBy" "totalShooting" on="click"}}>
+          <th {{action "sortBy" "totalShooting"}}>
             Shooting
             <i {{bind-attr class="sortTotalShooting"}}>
             </i>
@@ -49,7 +49,7 @@
           <td colspan="4">
             {{#unless isFirstPage}}
               <div class="pull-left">
-                <a {{action "previousPage" on="click"}} class="btn btn-success btn-lg">
+                <a {{action "previousPage"}} class="btn btn-success btn-lg">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
                 </a>
@@ -57,7 +57,7 @@
             {{/unless}}
             {{#unless isLastPage}}
               <div class="pull-right">
-                <a {{action "nextPage" on="click"}} class="btn btn-success btn-lg">
+                <a {{action "nextPage"}} class="btn btn-success btn-lg">
                   <span class="glyphicon glyphicon-chevron-right">
                   </span>
                 </a>
