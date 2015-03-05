@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       {{#each round in model}}
-        <tr>
+        {{#link-to "round" round.id tagName="tr" classNames="u-pointer"}}
           <td>
             {{round.courseName}}
           </td>
@@ -25,11 +25,9 @@
             {{display-date round.createdAt}}
           </td>
           <td>
-            {{#link-to "round" round}}
-              Recap
-            {{/link-to}}
+            <span class='glyphicon glyphicon-chevron-right'></span>
           </td>
-        </tr>
+        {{/link-to}}
       {{/each}}
     </tbody>
   </table>

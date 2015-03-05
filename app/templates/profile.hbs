@@ -1,6 +1,9 @@
 <h2 class="text-center">
   Profile
 </h2>
+
+<div class='push-down'></div>
+
 <form>
   <div class="form-group">
     <label for="firstName">
@@ -20,16 +23,22 @@
     </label>
     {{input value=lastName type="text" id="lastName" required=true classNames="form-control"}}
   </div>
-  <div class="form-group">
-    <button {{bind-attr class=":btn :btn-block :btn-primary :btn-lg isDirty:active:disabled"}} type="submit" {{action "saveChanges" on="click"}}>
-      Save
-    </button>
-    <button {{bind-attr class=":btn :btn-block :btn-danger :btn-lg isDirty:active:disabled"}} {{action "cancel" on="click"}}>
-      Cancel
-    </button>
+  <div class="form-group row">
+    <div class='col-xs-6'>
+      <button {{bind-attr class=":btn :btn-block :btn-primary :btn-lg isDirty:active:disabled"}} type="submit" {{action "saveChanges" on="click"}}>
+        Save
+      </button>
+    </div>
+    <div class='col-xs-6'>
+      <button {{bind-attr class=":btn :btn-block :btn-danger :btn-lg isDirty:active:disabled"}} {{action "cancel" on="click"}}>
+        Cancel
+      </button>
+    </div>
   </div>
 </form>
+
 <hr />
+
 <h2 class="text-center">
   Avatar
 </h2>
@@ -43,10 +52,12 @@
   </p>
   {{file-upload url="api/avatars" imageUrl=model.avatarUrl}}
 {{/if}}
+
 <hr />
-<h2 class="text-center">
-  Settings
-</h2>
-<a {{action "logout" on="click"}}>
-  Logout
-</a>
+
+<div class='text-center'>
+  <button {{action "logout" on="click"}} class='btn-danger btn btn-lg'>
+    Logout
+  </button>
+</div>
+

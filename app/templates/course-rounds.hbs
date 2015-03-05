@@ -1,0 +1,92 @@
+<h3 class="text-center">
+  Rounds
+</h3>
+
+{{#if arrangedContent}}
+  {{#if filteredContent}}
+    <table id="rounds" class="table table-striped">
+      <thead>
+        <tr>
+          <th {{action "sortBy" "createdAt"}}>
+            Date Played
+            <i {{bind-attr class="sortCreatedAt"}}>
+            </i>
+          </th>
+          <th {{action "sortBy" "totalScore"}}>
+            Score
+            <i {{bind-attr class="sortTotalScore"}}>
+            </i>
+          </th>
+          <th {{action "sortBy" "totalShooting"}}>
+            Shooting
+            <i {{bind-attr class="sortTotalShooting"}}>
+            </i>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each scorecard in pagedContent}}
+          {{#link-to "round" scorecard.roundId tagName="tr" classNames="u-pointer"}}
+            <td>
+              {{display-date scorecard.createdAt}}
+            </td>
+            <td>
+              {{scorecard.totalScore}}
+            </td>
+            <td>
+              {{scorecard.formattedTotalShooting}}
+            </td>
+            <td>
+              <span class='glyphicon glyphicon-chevron-right'></span>
+            </td>
+          {{/link-to}}
+        {{/each}}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">
+            {{#unless isFirstPage}}
+              <div class="pull-left">
+                <a {{action "previousPage"}} class="btn btn-success btn-lg">
+                  <span class="glyphicon glyphicon-chevron-left">
+                  </span>
+                </a>
+              </div>
+            {{/unless}}
+            {{#unless isLastPage}}
+              <div class="pull-right">
+                <a {{action "nextPage"}} class="btn btn-success btn-lg">
+                  <span class="glyphicon glyphicon-chevron-right">
+                  </span>
+                </a>
+              </div>
+            {{/unless}}
+            <div class="text-center">
+              Page
+              {{page}}
+               of
+              {{totalPages}}
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  {{/if}}
+  {{#unless allScorecardsCompleted}}
+    <div class='checkbox text-center'>
+      <label>
+        {{input name='includeIncompleteScorecards' type='checkbox' checked=includeIncompleteScorecards}}
+        Include Incomplete Scorecards
+      </label>
+    </div>
+    {{#if includeIncompleteScorecards}}
+      <p class='text-center'>* Denotes Incomplete Scorecard</p>
+    {{/if}}
+  {{/unless}}
+{{else}}
+  <p>
+    You haven't played any rounds
+  </p>
+{{/if}}

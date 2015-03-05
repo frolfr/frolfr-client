@@ -18,6 +18,7 @@ Router.map(function() {
   });
   this.resource('course', { path: '/courses/:id' }, function() {
     this.resource('leaderboard');
+    this.resource('courseRounds', { path: '/rounds' });
     this.resource('courseStatLog', { path: '/stats' });
     this.resource('reviews', function() {
       this.route('new');
