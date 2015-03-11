@@ -1,6 +1,16 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  {{link-to "Frolfr" "index" classNames="navbar-brand" id="title"}}
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container-fluid">
+      {{link-to "Frolfr" "index" classNames="navbar-brand" id="title"}}
+      {{#if currentRound}}
+        <p class="navbar-text navbar-right pull-right">
+          {{link-to "Current Round" "turns" currentRound "1" classNames="navbar-link"}}
+        </p>
+      {{/if}}
+   </div>
+ </nav>
+
+
+
 <section class="main-section">
   <div class="container">
     {{outlet}}
