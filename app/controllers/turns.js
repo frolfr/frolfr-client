@@ -20,7 +20,7 @@ var TurnsController = Ember.ArrayController.extend({
   finishRound: function() {
     var roundId = this.get('roundId');
 
-    this.controllerFor('currentRound').set('model', null);
+    this.controllerFor('application').set('currentRound', null);
     this.transitionToRoute('round', roundId);
   },
 

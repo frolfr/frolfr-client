@@ -62,7 +62,7 @@ var SessionsController = Ember.Controller.extend({
         _this.setupCurrentUser();
 
         _this.store.find('round', 'current').then(function(round) {
-          _this.controllerFor('currentRound').set('model', round);
+          _this.controllerFor('application').set('currentRound', round);
         });
 
         if (attemptedTransition) {

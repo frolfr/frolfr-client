@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 var ApplicationController = Ember.Controller.extend({
-    needs: ['currentUser', 'currentRound'],
+    needs: ['currentUser'],
     currentUser: Ember.computed.alias('controllers.currentUser'),
-    currentRound: Ember.computed.alias('controllers.currentRound')
+    currentRound: null
 });
 
 export default ApplicationController;
