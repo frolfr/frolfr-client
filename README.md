@@ -41,7 +41,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+You'll need to set up `deploy.json` and put in your app's main directory.
+
+* `ember deploy --environment production`
+* `ember deploy:activate --revision frolfr-client:REVISION_SHA  --envrionment production`
 
 ## Further Reading / Useful Links
 
