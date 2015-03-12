@@ -17,6 +17,13 @@ var TurnsController = Ember.ArrayController.extend({
   isPar4: function() { return this.get('holePar') === 4; }.property('holePar'),
   isPar5: function() { return this.get('holePar') === 5; }.property('holePar'),
 
+  finishRound: function() {
+    var roundId = this.get('roundId');
+
+    this.controllerFor('application').set('currentRound', null);
+    this.transitionToRoute('round', roundId);
+  },
+
   actions: {
     previousHole: function() {
       var holeNumber = parseInt(this.get('holeNumber')) - 1,
@@ -35,7 +42,7 @@ var TurnsController = Ember.ArrayController.extend({
       this.send('saveAll');
 
       if (this.get('isLastHole')) {
-        _this.transitionToRoute('round', roundId);
+        _this.finishRound();
       } else {
         _this.transitionToRoute('turns', roundId, holeNumber);
       }
