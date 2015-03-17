@@ -1,11 +1,13 @@
 import AuthenticatedRoute from './authenticated';
+import RouteMixin from 'ember-cli-pagination/remote/route-mixin';
 
-var FriendsRoute = AuthenticatedRoute.extend({
-  model: function() {
-    return this.store.find('friend');
+var FriendsRoute = AuthenticatedRoute.extend(RouteMixin, {
+  model: function(params) {
+    return this.findPaged('friend', params);
   },
 
   afterModel: function() {
+    console.log("hello i exist");
     var _this = this;
     return this.store.find('friendableUser').then(function(friendableUsers) {
       _this.set('friendableUsers', friendableUsers);
