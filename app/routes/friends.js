@@ -7,7 +7,6 @@ var FriendsRoute = AuthenticatedRoute.extend(RouteMixin, {
   },
 
   afterModel: function() {
-    console.log("hello i exist");
     var _this = this;
     return this.store.find('friendableUser').then(function(friendableUsers) {
       _this.set('friendableUsers', friendableUsers);
