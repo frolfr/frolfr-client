@@ -3,6 +3,10 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## Contributing
+
+Wanna contribute? You're the best! Check out our list of [Github issues](https://github.com/frolfr/frolfr-server/issues/) on the server repo.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
