@@ -1,9 +1,16 @@
 <h2 class="text-center">
+  Search for Friends
+</h2>
+{{render "friendable-users"}}
+
+<hr/>
+
+<h2 class="text-center">
   Friends
 </h2>
-{{#if model}}
+{{#if pagedContent}}
   <div class="row block-grid-xs-3 block-grid-sm-4 block-grid-lg-6">
-    {{#each friend in controller}}
+    {{#each friend in pagedContent}}
       <div class="block-grid-item">
         {{#link-to "userStatLog" friend tagName="div" classNames="u-pointer"}}
           {{#if friend.hasAvatar}}
@@ -18,13 +25,14 @@
       </div>
     {{/each}}
   </div>
+  {{#if hasNextPage}}
+    <div class="push-down"></div>
+    <div class="row push-down text-center">
+      <p><a class="btn btn-primary" {{action "loadNext"}}>More Friends</a></p>
+    </div>
+  {{/if}}
 {{else}}
   <p>
     You don't have any friends yet.
   </p>
 {{/if}}
-<hr />
-<h2 class="text-center">
-  Search for Friends
-</h2>
-{{render "friendable-users"}}
