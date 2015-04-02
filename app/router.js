@@ -20,6 +20,7 @@ Router.map(function() {
     this.resource('leaderboard');
     this.resource('courseRounds', { path: '/rounds' });
     this.resource('courseStatLog', { path: '/stats' });
+    this.resource('holeStatLogs', { path: '/holes' });
     this.resource('reviews', function() {
       this.route('new');
     });

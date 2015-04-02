@@ -1,0 +1,57 @@
+<div class="nav nav-pills nav-justified">
+  {{#link-to "courseStatLog" tagName="li" classNames="u-pointer"}}
+    <a>
+      <span>
+        Overall
+      </span>
+    </a>
+  {{/link-to}}
+  {{#link-to "holeStatLogs" tagName="li" classNames="u-pointer"}}
+    <a>
+      <span>
+        Holes
+      </span>
+    </a>
+  {{/link-to}}
+</div>
+
+<h3 class="visible-xs text-center">
+  Holes
+</h3>
+
+<table id="hole-stats" class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        &nbsp;
+      </th>
+      <th>
+        Average Strokes
+      </th>
+      <th>
+        Average Score
+      </th>
+      <th>
+        Difficulty
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each hole in model}}
+      <tr>
+        <td>
+          <strong>{{hole.number}}</strong>
+        </td>
+        <td>
+          {{hole.displayAverageScore}}
+        </td>
+        <td>
+          {{display-score hole.displayAverageShooting}}
+        </td>
+        <td>
+          {{hole.ranking}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
