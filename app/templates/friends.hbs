@@ -24,8 +24,13 @@
         {{/link-to}}
       </div>
     {{/each}}
-    <a {{action "loadNext"}}>Load MORE</a>
   </div>
+  {{#if hasNextPage}}
+    <div class="push-down"></div>
+    <div class="row push-down text-center">
+      <p><a class="btn btn-primary" {{action "loadNext"}}>More Friends</a></p>
+    </div>
+  {{/if}}
 {{else}}
   <p>
     You don't have any friends yet.
