@@ -3,7 +3,7 @@
       {{link-to "Frolfr" "index" classNames="navbar-brand" id="title"}}
       {{#if currentRound}}
         <p class="navbar-text navbar-right pull-right">
-          {{link-to "Current Round" "turns" currentRound "1" classNames="navbar-link"}}
+          {{link-to currentRoundLinkText "turns" currentRound currentHole classNames="navbar-link"}}
         </p>
       {{/if}}
    </div>

@@ -21,6 +21,7 @@ var TurnsController = Ember.ArrayController.extend({
     var roundId = this.get('roundId');
 
     this.controllerFor('application').set('currentRound', null);
+    this.controllerFor('application').set('currentHole', null);
     this.transitionToRoute('round', roundId);
   },
 
@@ -30,6 +31,7 @@ var TurnsController = Ember.ArrayController.extend({
           roundId = this.get('roundId');
 
       this.send('saveAll');
+      this.controllerFor('application').set('currentHole', holeNumber);
 
       this.transitionToRoute('turns', roundId, holeNumber);
     },
@@ -40,6 +42,7 @@ var TurnsController = Ember.ArrayController.extend({
           _this = this;
 
       this.send('saveAll');
+      this.controllerFor('application').set('currentHole', holeNumber);
 
       if (this.get('isLastHole')) {
         _this.finishRound();

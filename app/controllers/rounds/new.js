@@ -33,6 +33,7 @@ var RoundsNewController = Ember.ObjectController.extend({
       this.set('model.course', this.get('model.course.content'));
       this.get('model').save().then(function(round) {
         _this.controllerFor('application').set('currentRound', round);
+        _this.controllerFor('application').set('currentHole', '1');
         _this.transitionToRoute('turns', round, 1);
       });
     }
