@@ -9,19 +9,19 @@ var Course = DS.Model.extend({
     status: DS.attr('string'),
     location: DS.attr('string'),
     roundsPlayed: DS.attr('number'),
-    imageUrl: DS.attr('string'),
     scorecards: DS.hasMany('scorecard', { async: true }),
     holes: DS.hasMany('hole', { async: true }),
     holeCount: DS.attr('number'),
     reviews: DS.hasMany('review', { async: true }),
+    images: DS.hasMany('image', {async: true}),
 
     isApproved: function() {
         return this.get('status') === 'approved';
     }.property('status'),
 
     hasImage: function() {
-        return Ember.isPresent(this.get('imageUrl'));
-    }.property('imageUrl')
+        return Ember.isPresent(this.get('images'));
+    }.property('images')
 });
 
 export default Course;
