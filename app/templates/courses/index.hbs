@@ -1,4 +1,4 @@
-{{#if model}}
+{{#if content}}
   <h2 class="text-center">
     Courses
   </h2>
@@ -17,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each course in controller}}
+      {{#each course in content}}
         <tr>
           <td>
             {{#link-to "courseStatLog" course}}
@@ -34,6 +34,10 @@
       {{/each}}
     </tbody>
   </table>
+
+  <div class='text-center'>
+    {{page-numbers content=content}}
+  </div>
 {{else}}
   <h2>
     Welcome to Frolfr!
