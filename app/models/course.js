@@ -8,7 +8,7 @@ var Course = DS.Model.extend({
     name: DS.attr('string'),
     status: DS.attr('string'),
     location: DS.attr('string'),
-    roundsPlayed: DS.attr('number'),
+    lastPlayedAt: DS.attr('date'),
     scorecards: DS.hasMany('scorecard', { async: true }),
     holes: DS.hasMany('hole', { async: true }),
     holeCount: DS.attr('number'),
