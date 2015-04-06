@@ -76,3 +76,8 @@ img { max-width: 100%; }
   color: white !important;
   text-decoration: none !important;
 }
+
+ul.pagination > li > a {
+  z-index: 0 !important;
+  cursor: pointer;
+}
