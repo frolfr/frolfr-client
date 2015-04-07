@@ -1,4 +1,5 @@
 import Ember from "ember";
+import config from 'frolfr-client/config/environment';
 /* global EmberUploader */
 
 var FileUploadComponent = EmberUploader.FileField.extend({
@@ -6,7 +7,7 @@ var FileUploadComponent = EmberUploader.FileField.extend({
   imageUrl: null,
 
   filesDidChange: function() {
-    var uploadUrl = this.get('url');
+    var uploadUrl = config.apiHost + this.get('url');
     var files = this.get('files');
     var uploader = EmberUploader.Uploader.create({
       url: uploadUrl
