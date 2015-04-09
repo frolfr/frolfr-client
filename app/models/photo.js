@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
-var Image = DS.Model.extend({
+var Photo = DS.Model.extend({
   url: DS.attr('string'),
   takenAt: DS.attr('date')
 });
 
-export default Image;
+export default Photo;

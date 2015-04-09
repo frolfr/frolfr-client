@@ -13,15 +13,15 @@ var Course = DS.Model.extend({
     holes: DS.hasMany('hole', { async: true }),
     holeCount: DS.attr('number'),
     reviews: DS.hasMany('review', { async: true }),
-    images: DS.hasMany('image', {async: true}),
+    photos: DS.hasMany('photo', {async: true}),
 
     isApproved: function() {
         return this.get('status') === 'approved';
     }.property('status'),
 
-    hasImage: function() {
-        return Ember.isPresent(this.get('images'));
-    }.property('images')
+    hasPhoto: function() {
+        return Ember.isPresent(this.get('photos'));
+    }.property('photos')
 });
 
 export default Course;

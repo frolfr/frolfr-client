@@ -2,11 +2,11 @@
   Photos
 </h3>
 <div class="text-center">
-  {{#if hasImage}}
-    {{#each image in images}}
+  {{#if hasPhoto}}
+    {{#each photo in photos}}
       <div class='row'>
-        <img {{bind-attr src="image.url"}} />
-        <p>{{display-date image.takenAt}}</p>
+        <img {{bind-attr src="photo.url"}} />
+        <p>{{display-date photo.takenAt}}</p>
       </div>
     {{/each}}
   {{else}}
