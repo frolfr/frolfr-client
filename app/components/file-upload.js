@@ -4,7 +4,7 @@ import config from 'frolfr-client/config/environment';
 
 var FileUploadComponent = EmberUploader.FileField.extend({
   path: '',
-  imageUrl: null,
+  photoUrl: null,
 
   filesDidChange: function() {
     var uploadUrl = config.apiHost + '/' + this.get('path');
@@ -16,7 +16,7 @@ var FileUploadComponent = EmberUploader.FileField.extend({
 
     if (Ember.isPresent(files)) {
       uploader.upload(files[0]).then(function(data) {
-        _this.set('imageUrl', data.user.avatar_url);
+        _this.set('photoUrl', data.user.avatar_url);
       });
     }
   }.observes('files')
