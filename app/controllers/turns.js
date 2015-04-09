@@ -52,21 +52,21 @@ var TurnsController = Ember.ArrayController.extend({
     },
 
     addOne: function(turn) {
-      var score = parseInt(turn.get('score') || 0),
-          maximumTurnScore = 8;
+      var strokes = parseInt(turn.get('strokes') || 0),
+          maximumTurnStrokes = 8;
 
-      turn.set('score', Math.min(maximumTurnScore, score + 1));
+      turn.set('strokes', Math.min(maximumTurnStrokes, strokes + 1));
     },
 
     subtractOne: function(turn) {
-      var score = parseInt(turn.get('score') || 0),
-          minimumTurnScore = 1,
-          newScore = score - 1;
+      var strokes = parseInt(turn.get('strokes') || 0),
+          minimumTurnStrokes = 1,
+          newStrokes = strokes - 1;
 
-      if (newScore < minimumTurnScore) {
-        turn.set('score', null);
+      if (newStrokes < minimumTurnStrokes) {
+        turn.set('strokes', null);
       } else {
-        turn.set('score', newScore);
+        turn.set('strokes', newStrokes);
       }
     },
 

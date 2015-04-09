@@ -67,12 +67,12 @@ var CourseRoundsController = Ember.ArrayController.extend({
     return this.isSortedBy('createdAt');
   }.property('currentSortProperty', 'sortDirection'),
 
-  sortTotalScore: function() {
-    return this.isSortedBy('totalScore');
+  sortTotalStrokes: function() {
+    return this.isSortedBy('totalStrokes');
   }.property('currentSortProperty', 'sortDirection'),
 
-  sortTotalShooting: function() {
-    return this.isSortedBy('totalShooting');
+  sortTotalScore: function() {
+    return this.isSortedBy('totalScore');
   }.property('currentSortProperty', 'sortDirection'),
 
   isSortedBy: function(property) {

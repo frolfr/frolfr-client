@@ -2,7 +2,7 @@ import Ember from "ember";
 import DS from 'ember-data';
 
 var Turn = DS.Model.extend({
-  score: DS.attr('number'),
+  strokes: DS.attr('number'),
   par: DS.attr('number'),
   holeNumber: DS.attr('string'),
   scorecard: DS.belongsTo('scorecard', { async: true }),
@@ -20,20 +20,20 @@ var Turn = DS.Model.extend({
   }.property('shooting', 'isPlayed'),
 
   shooting: function () {
-    return this.get('score') - this.get('par');
-  }.property('score', 'par'),
+    return this.get('strokes') - this.get('par');
+  }.property('strokes', 'par'),
 
   isPlayed: function() {
-    return Ember.isPresent(this.get('score'));
-  }.property('score'),
+    return Ember.isPresent(this.get('strokes'));
+  }.property('strokes'),
 
-  displayScore: function() {
+  displayStrokes: function() {
     if (this.get('isPlayed')) {
-      return this.get('score');
+      return this.get('strokes');
      } else {
       return '-';
     }
-  }.property('isPlayed', 'score')
+  }.property('isPlayed', 'strokes')
 });
 
 export default Turn;
