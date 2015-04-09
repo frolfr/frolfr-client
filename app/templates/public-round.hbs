@@ -32,9 +32,9 @@
           </li>
           <li><strong>{{scorecard.userInitials}}</strong></li>
           {{#each turn in scorecard.turns}}
-            <li {{bind-attr class='turn.parStatus'}}>{{turn.displayScore}}</li>
+            <li {{bind-attr class='turn.parStatus'}}>{{turn.displayStrokes}}</li>
           {{/each}}
-          <li><strong>{{scorecard.totalScore}}</strong></li>
+          <li><strong>{{scorecard.totalStrokes}}</strong></li>
           <li><strong>{{scorecard.formattedShooting}}</strong></li>
         </ul>
       </div>

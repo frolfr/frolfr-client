@@ -50,11 +50,11 @@ var Scorecard = DS.Model.extend({
     });
   }.property('turns.@each.isPlayed'),
 
-  totalScore: function () {
+  totalStrokes: function () {
     return this.get('playedTurns').reduce(function (acc, turn) {
-      return acc + turn.get('score');
+      return acc + turn.get('strokes');
     }, 0);
-  }.property('playedTurns.@each.score'),
+  }.property('playedTurns.@each.strokes'),
 
   totalPar: function () {
     return this.get('playedTurns').reduce(function (acc, turn) {
@@ -62,31 +62,31 @@ var Scorecard = DS.Model.extend({
     }, 0);
   }.property('playedTurns.@each.par'),
 
-  totalShooting: function () {
-    return this.get('totalScore') - this.get('totalPar');
-  }.property('totalScore', 'totalPar'),
+  totalScore: function () {
+    return this.get('totalStrokes') - this.get('totalPar');
+  }.property('totalStrokes', 'totalPar'),
 
   formattedTotals: function () {
-    var totalScore = this.get('totalScore'),
+    var totalStrokes = this.get('totalStrokes'),
         formattedShooting = this.get('formattedShooting');
 
-    return totalScore + ' (' + formattedShooting + ')';
-  }.property('totalScore', 'formattedShooting'),
+    return totalStrokes + ' (' + formattedShooting + ')';
+  }.property('totalStrokes', 'formattedShooting'),
 
   formattedShooting: function () {
-    var totalScore = this.get('totalScore'),
+    var totalStrokes = this.get('totalStrokes'),
         totalPar   = this.get('totalPar'),
-        totalShooting = this.get('totalShooting'),
+        totalScore = this.get('totalScore'),
         sign = '';
 
-    if (totalPar < totalScore) {
+    if (totalPar < totalStrokes) {
       sign = "+";
-    } else if (totalShooting === 0) {
-      totalShooting = "Even";
+    } else if (totalScore === 0) {
+      totalScore = "Even";
     }
 
-    return sign + totalShooting;
-  }.property('totalScore', 'totalPar', 'totalShooting')
+    return sign + totalScore;
+  }.property('totalStrokes', 'totalPar', 'totalScore')
 });
 
 export default Scorecard;

@@ -2,14 +2,14 @@ import DS from 'ember-data';
 
 var CourseScorecard = DS.Model.extend({
   createdAt: DS.attr('date'),
+  totalStrokes: DS.attr('number'),
   totalScore: DS.attr('number'),
-  totalShooting: DS.attr('number'),
   isCompleted: DS.attr('boolean'),
   round: DS.belongsTo('round', { async: true }),
   roundId: DS.attr('number'),
 
-  formattedTotalShooting: function() {
-    var shooting = this.get('totalShooting'),
+  formattedTotalScore: function() {
+    var shooting = this.get('totalScore'),
         isCompleted = this.get('isCompleted');
 
     if (shooting > 0) {
@@ -23,7 +23,7 @@ var CourseScorecard = DS.Model.extend({
     }
 
     return shooting;
-  }.property('totalShooting', 'isCompleted')
+  }.property('totalScore', 'isCompleted')
 });
 
 export default CourseScorecard;

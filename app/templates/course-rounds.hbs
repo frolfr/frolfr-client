@@ -12,14 +12,14 @@
             <i {{bind-attr class="sortCreatedAt"}}>
             </i>
           </th>
+          <th {{action "sortBy" "totalStrokes"}}>
+            Strokes
+            <i {{bind-attr class="sortTotalStrokes"}}>
+            </i>
+          </th>
           <th {{action "sortBy" "totalScore"}}>
             Score
             <i {{bind-attr class="sortTotalScore"}}>
-            </i>
-          </th>
-          <th {{action "sortBy" "totalShooting"}}>
-            Shooting
-            <i {{bind-attr class="sortTotalShooting"}}>
             </i>
           </th>
           <th>
@@ -33,10 +33,10 @@
               {{display-date scorecard.createdAt}}
             </td>
             <td>
-              {{scorecard.totalScore}}
+              {{scorecard.totalStrokes}}
             </td>
             <td>
-              {{scorecard.formattedTotalShooting}}
+              {{scorecard.formattedTotalScore}}
             </td>
             <td>
               <span class='glyphicon glyphicon-chevron-right'></span>
