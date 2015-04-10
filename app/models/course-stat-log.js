@@ -3,10 +3,10 @@ import DS from 'ember-data';
 var CourseStatLog = DS.Model.extend({
   totalScorecardsPlayed: DS.attr('number'),
   completedScorecardsPlayed: DS.attr('number'),
-  averageStrokesOnCompletedScorecards: DS.attr('number'),
-  bestStrokesOnCompletedScorecards: DS.attr('number'),
-  averageScoreOnCompletedScorecards: DS.attr('number'),
-  bestScoreOnCompletedScorecards: DS.attr('number'),
+  averageStrokes: DS.attr('number'),
+  bestStrokes: DS.attr('number'),
+  averageScore: DS.attr('number'),
+  bestScore: DS.attr('number'),
   totalBogeys: DS.attr('number'),
   totalPars: DS.attr('number'),
   totalBirdies: DS.attr('number'),
@@ -14,12 +14,12 @@ var CourseStatLog = DS.Model.extend({
   totalDoublesOrWorse: DS.attr('number'),
 
   displayAverageStrokes: function() {
-    return Number(this.get('averageStrokesOnCompletedScorecards')).toFixed(3);
-  }.property('averageStrokesOnCompletedScorecards'),
+    return Number(this.get('averageStrokes')).toFixed(3);
+  }.property('averageStrokes'),
 
   displayAverageScore: function() {
-    return Number(this.get('averageScoreOnCompletedScorecards')).toFixed(3);
-  }.property('averageScoreOnCompletedScorecards'),
+    return Number(this.get('averageScore')).toFixed(3);
+  }.property('averageScore'),
 });
 
 export default CourseStatLog;
