@@ -1,3 +1,4 @@
+import Ember from "ember";
 import DS from 'ember-data';
 
 var HoleStatLog = DS.Model.extend({
@@ -10,12 +11,28 @@ var HoleStatLog = DS.Model.extend({
   ranking: DS.attr('number'),
 
   displayAverageStrokes: function() {
-    return Number(this.get('averageStrokes')).toFixed(3);
+    if (Ember.isPresent(this.get('averageStrokes'))) {
+      return Number(this.get('averageStrokes')).toFixed(3);
+    } else {
+      return "-";
+    }
   }.property('averageStrokes'),
 
   displayAverageScore: function() {
-    return Number(this.get('averageScore')).toFixed(3);
+    if (Ember.isPresent(this.get('averageScore'))) {
+      return Number(this.get('averageScore')).toFixed(3);
+    } else {
+      return "-";
+    }
   }.property('averageScore'),
+
+  displayRanking: function() {
+    if (Ember.isPresent(this.get('ranking'))) {
+      return this.get('ranking');
+    } else {
+      return "-";
+    }
+  }.property('ranking'),
 });
 
 export default HoleStatLog;
