@@ -5,7 +5,7 @@
   {{#if hasPhoto}}
     {{#each photo in photos}}
       <div class='row'>
-        <img {{bind-attr src="photo.url"}} />
+        <img {{bind-attr src="photo.url"}} class="img-thumbnail" />
         <p>{{display-date photo.takenAt}}</p>
       </div>
     {{/each}}

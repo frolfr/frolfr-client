@@ -41,7 +41,7 @@ var ShotBreakdownChartComponent = Ember.Component.extend({
         bogeys = ['Bogeys', this.get('bogeys')],
         pars = ['Pars', this.get('pars')],
         eagles = ['Eagles', this.get('eagles')],
-        doubles = ['Double Bogey or Worse', this.get('doubles')];
+        doubles = ['Other', this.get('doubles')];
 
     var data = [eagles, birdies, pars, bogeys, doubles].filter(function(shotData) {
       return shotData.get('lastObject') !== 0;
