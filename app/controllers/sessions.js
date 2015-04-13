@@ -63,6 +63,9 @@ var SessionsController = Ember.Controller.extend({
 
         _this.store.find('round', 'current').then(function(round) {
           _this.controllerFor('application').set('currentRound', round);
+
+          var nextUnplayedHole = round.get('scorecards.firstObject.nextUnplayedTurn.holeNumber');
+          _this.controllerFor('application').set('currentHole', nextUnplayedHole);
         });
 
         if (attemptedTransition) {
