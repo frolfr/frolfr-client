@@ -8,7 +8,13 @@ var ApplicationController = Ember.Controller.extend({
 
     currentRoundLinkText: function() {
       return 'Current Round ' + '(Hole ' + this.get('currentHole') + ')';
-    }.property('currentHole')
+    }.property('currentHole'),
+
+    actions: {
+      toggleMenu: function() {
+        Ember.$(".main-wrapper").toggleClass("toggled");
+      }
+    }
 });
 
 export default ApplicationController;

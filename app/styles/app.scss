@@ -15,6 +15,7 @@
 @import "reviews";
 @import "twitter-typeahead";
 @import "block-grids";
+@import "sidebar";
 @import url("http://fonts.googleapis.com/css?family=Trade+Winds");
 
 body {
@@ -71,13 +72,11 @@ img { max-width: 100%; }
   margin: 0;
 }
 
-.navbar-link {
-  padding-right: 10px;
-  color: white !important;
-  text-decoration: none !important;
-}
-
 ul.pagination > li > a {
   z-index: 0 !important;
   cursor: pointer;
+}
+
+.glyphicon-star {
+  color: yellow;
 }
