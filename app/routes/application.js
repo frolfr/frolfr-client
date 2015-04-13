@@ -7,6 +7,11 @@ var ApplicationRoute = Ember.Route.extend({
       this.controllerFor('application').set('currentRound', null);
       this.controllerFor('application').set('currentHole', null);
       window.location = "/sessions";
+    },
+
+    willTransition: function() {
+      Ember.$(".main-wrapper").removeClass("toggled");
+      return true;
     }
   },
 
