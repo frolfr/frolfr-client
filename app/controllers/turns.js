@@ -33,6 +33,7 @@ var TurnsController = Ember.ArrayController.extend({
       this.send('saveAll');
       this.controllerFor('application').set('currentHole', holeNumber);
 
+      Ember.$("html, body").animate({ scrollTop: 0 });
       this.transitionToRoute('turns', roundId, holeNumber);
     },
 
@@ -44,6 +45,7 @@ var TurnsController = Ember.ArrayController.extend({
       this.send('saveAll');
       this.controllerFor('application').set('currentHole', holeNumber);
 
+      Ember.$("html, body").animate({ scrollTop: 0 });
       if (this.get('isLastHole')) {
         _this.finishRound();
       } else {

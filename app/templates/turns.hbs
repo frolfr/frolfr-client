@@ -20,10 +20,10 @@
   </div>
 </div>
 {{#each turn in controller}}
-  <div class="media">
+  <div class="media turn-row">
     <div class="media-left media-middle">
       {{#if turn.scorecard.hasUserAvatar}}
-        <img {{bind-attr src="turn.scorecard.userAvatarUrl"}} class="media-object thumbnail u-circle" />
+        <img {{bind-attr src="turn.scorecard.userAvatarUrl"}} class="media-object turns-thumbnail thumbnail u-circle" />
       {{else}}
         <h2 class="media-object">
           {{turn.scorecard.userInitials}}
@@ -54,6 +54,7 @@
     </div>
   </div>
 {{/each}}
+<div class="push-down"></div>
 <div class="well row">
   {{#unless isFirstHole}}
     <div class="pull-left">
