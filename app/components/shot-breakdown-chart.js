@@ -58,6 +58,11 @@ var ShotBreakdownChartComponent = Ember.Component.extend({
     var chart = this.get('chartOptions');
     chart.series = this.get('series');
     chart.title = '';
+    chart.chart = {
+      style: {
+        fontFamily: '"Lato","Helvetica Neue","Helvetica"'
+      }
+    }
 
     Ember.$('.chart').highcharts(chart);
   },

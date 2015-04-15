@@ -5,8 +5,7 @@
         {{#if currentRound}}
           {{#link-to "turns" currentRound currentHole tagName="li" classNames="u-pointer"}}
             <a>
-              <span class="glyphicon glyphicon-star">
-              </span>
+              <i class="fa fa-star"></i>
               {{currentRoundLinkText}}
             </a>
           {{/link-to}}
@@ -15,8 +14,7 @@
 
         {{#link-to "rounds.new" tagName="li" classNames="u-pointer"}}
           <a>
-            <span class="glyphicon glyphicon-plus">
-            </span>
+            <i class="fa fa-plus"></i>
             New Round
           </a>
         {{/link-to}}
@@ -35,8 +33,7 @@
         {{/link-to}}
         {{#link-to "profile" tagName="li" classNames="u-pointer"}}
           <a>
-            <span class="glyphicon glyphicon-heart">
-            </span>
+            <i class="fa fa-heart"></i>
             Profile
           </a>
         {{/link-to}}
@@ -49,8 +46,7 @@
       <div class="container-fluid navbar-container">
         {{#if currentUser.isAuthenticated}}
           <a {{action "toggleMenu"}} class="navbar-left navbar-brand navbar-link u-pointer navbar-menu">
-            <span class="glyphicon glyphicon-menu-hamburger">
-            </span>
+            <i class="fa fa-bars"></i>
           </a>
         {{/if}}
         {{link-to "Frolfr" "index" id="title" classNames="navbar-brand navbar-brand-text navbar-left navbar-link"}}

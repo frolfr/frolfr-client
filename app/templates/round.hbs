@@ -1,16 +1,7 @@
 <div class='well'>
   <header class='text-center'>
-    {{#if publicRecap}}
-      <button class='btn btn-danger btn-xs pull-right' {{action 'makePrivate'}}>Make Private</button>
-    {{else}}
-      <button class='btn btn-success btn-xs pull-right' {{action 'publish'}}>Publish</button>
-    {{/if}}
-    <br>
     <h3>{{courseName}}</h3>
     <h5>{{display-date createdAt}}</h5>
-    {{#if publicRecap}}
-      <p>Available publicly at {{publicRoundUrl}}</p>
-    {{/if}}
   </header>
 </div>
 

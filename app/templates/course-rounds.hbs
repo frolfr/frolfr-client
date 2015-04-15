@@ -39,7 +39,7 @@
               {{scorecard.formattedTotalScore}}
             </td>
             <td>
-              <span class='glyphicon glyphicon-chevron-right'></span>
+              <i class="fa fa-chevron-right"></i>
             </td>
           {{/link-to}}
         {{/each}}
@@ -50,16 +50,14 @@
             {{#unless isFirstPage}}
               <div class="pull-left">
                 <a {{action "previousPage"}} class="btn btn-success btn-lg">
-                  <span class="glyphicon glyphicon-chevron-left">
-                  </span>
+                  <i class="fa fa-chevron-left"></i>
                 </a>
               </div>
             {{/unless}}
             {{#unless isLastPage}}
               <div class="pull-right">
                 <a {{action "nextPage"}} class="btn btn-success btn-lg">
-                  <span class="glyphicon glyphicon-chevron-right">
-                  </span>
+                  <i class="fa fa-chevron-right"></i>
                 </a>
               </div>
             {{/unless}}

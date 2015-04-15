@@ -9,8 +9,8 @@
 //   Libraries
 // -------------------------------------
 
-@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "bootstrap_and_overrides";
+@import "flatboot";
+@import "variables_and_overrides";
 @import "round-show-table";
 @import "reviews";
 @import "twitter-typeahead";
@@ -19,7 +19,15 @@
 @import url("http://fonts.googleapis.com/css?family=Trade+Winds");
 
 body {
-  padding-top: 50px;
+  padding-top: 40px;
+}
+
+.burnt-orange {
+  color: #df691a !important;
+}
+
+.font-size-12 {
+  font-size: 12px;
 }
 
 .u-pointer {
@@ -31,10 +39,13 @@ body {
   height: auto;
 }
 
-#title {
+#title, #welcome-title {
   font-family: 'Trade Winds', cursive;
-  color: white;
   text-decoration: none;
+}
+
+#title {
+  color: white;
 }
 
 .chosen-choices input { height: 37px !important; }
@@ -77,6 +88,6 @@ ul.pagination > li > a {
   cursor: pointer;
 }
 
-.glyphicon-star {
+.fa-star {
   color: yellow;
 }
