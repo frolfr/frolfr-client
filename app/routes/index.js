@@ -1,8 +1,13 @@
-import AuthenticatedRoute from './authenticated';
+import Ember from 'ember';
 
-var IndexRoute = AuthenticatedRoute.extend({
-  redirect: function() {
-    this.transitionTo('courses');
+var IndexRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    this._super(controller, model);
+
+    // TODO: Revisit with https://github.com/frolfr/frolfr-server/issues/152
+    if (this.controllerFor('sessions').get('token')) {
+      this.transitionTo('courses');
+    }
   }
 });
 
