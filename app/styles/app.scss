@@ -22,6 +22,14 @@ body {
   padding-top: 50px;
 }
 
+.navy-blue {
+  color: #0B0B61 !important;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
 .u-pointer {
   cursor: pointer;
 }
@@ -31,10 +39,13 @@ body {
   height: auto;
 }
 
-#title {
+#title, #welcome-title {
   font-family: 'Trade Winds', cursive;
-  color: white;
   text-decoration: none;
+}
+
+#title {
+  color: white;
 }
 
 .chosen-choices input { height: 37px !important; }
