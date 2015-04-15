@@ -9,8 +9,8 @@
 //   Libraries
 // -------------------------------------
 
-@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "bootstrap_and_overrides";
+@import "flatboot";
+@import "variables_and_overrides";
 @import "round-show-table";
 @import "reviews";
 @import "twitter-typeahead";
