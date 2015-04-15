@@ -9,6 +9,7 @@ var Router = Ember.Router.extend({
 // });
 
 Router.map(function() {
+  this.route('welcome');
   this.resource('publicRound', { path: '/public/rounds/:id' });
   this.resource('sessions', function() {
     this.route('login');
