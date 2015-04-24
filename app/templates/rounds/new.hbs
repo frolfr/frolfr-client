@@ -23,7 +23,7 @@
         </div>
         <div class="col-xs-3">
           <button {{action 'addPlayer'}} {{bind-attr disabled="noPlayerSelected"}} class="btn btn-block btn-lg btn-success">
-            <i class="fa fa-chevron-plus"></i>
+            <i class="fa fa-plus"></i>
           </button>
         </div>
       </div>
@@ -50,7 +50,7 @@
             {{player.fullName}}
           </div>
           <button {{action 'removePlayer' player}} class="btn btn-block btn-danger">
-            <i class="fa fa-chevron-minus"></i>
+            <i class="fa fa-minus"></i>
           </button>
         </div>
       {{/each}}
