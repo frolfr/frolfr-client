@@ -24,6 +24,8 @@ var ApplicationRoute = Ember.Route.extend({
 
       var nextUnplayedHole = round.get('scorecards.firstObject.nextUnplayedTurn.holeNumber');
       _this.controllerFor('application').set('currentHole', nextUnplayedHole);
+    }, function(error) {
+      // Do nothing if there is no current round
     });
   }
 });
