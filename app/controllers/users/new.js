@@ -5,9 +5,9 @@ var UsersNewController = Ember.Controller.extend({
   needs: "sessions",
 
   actions: {
-    createUser: function() {
-      var self = this;
-      var fields = this.get('fields');
+    save: function() {
+      var self = this,
+          user = this.get('model');
 
       if (User.validPassword(fields)) {
         var user = this.store.createRecord('user', fields);
