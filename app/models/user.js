@@ -16,12 +16,11 @@ var User = DS.Model.extend({
 
     hasAvatar: function() {
       return Ember.isPresent(this.get('avatarUrl'));
-    }.property('avatarUrl')
-});
-User.reopenClass({
-  validPassword: function(fields) {
-    return fields.password === fields.passwordConfirmation;
-  }
+    }.property('avatarUrl'),
+
+    hasValidPassword: function() {
+      return this.get('password') === this.get('passwordConfirmation');
+    }.property('password', 'passwordConfirmation')
 });
 
 export default User;
