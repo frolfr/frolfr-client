@@ -9,10 +9,11 @@ var User = DS.Model.extend({
     password: DS.attr('string'),
     passwordConfirmation: DS.attr('string'),
     avatarUrl: DS.attr('string'),
+    scorecards: DS.hasMany('scorecard', { async: true }),
+
     fullName: function() {
       return this.get('firstName') + " " + this.get('lastName');
     }.property("firstName", "lastName"),
-    scorecards: DS.hasMany('scorecard', { async: true }),
 
     hasAvatar: function() {
       return Ember.isPresent(this.get('avatarUrl'));
