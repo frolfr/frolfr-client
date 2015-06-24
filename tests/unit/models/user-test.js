@@ -30,3 +30,11 @@ test('User does not have matching password and confirmation', function(assert) {
 
   assert.equal(model.get('hasValidPassword'), false, 'does not have valid password');
 });
+
+test('fullName correctly concatenates firstName and lastName', function(assert) {
+  var model = this.subject({
+    firstName: 'John',
+    lastName: 'Smith'
+  });
+  assert.equal(model.get('fullName'), 'John Smith');
+});
