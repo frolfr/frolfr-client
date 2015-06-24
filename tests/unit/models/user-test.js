@@ -38,3 +38,11 @@ test('fullName correctly concatenates firstName and lastName', function(assert) 
   });
   assert.equal(model.get('fullName'), 'John Smith');
 });
+
+test('User has a scorecard', function(assert) {
+  var model = this.subject({}).constructor;
+  var relationship = Ember.get(model, 'relationshipsByName').get('scorecards');
+
+  assert.equal(relationship.key, 'scorecards');
+  assert.equal(relationship.kind, 'hasMany');
+});
