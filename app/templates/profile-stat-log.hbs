@@ -1,4 +1,48 @@
+{{#if hasNeverPlayed}}
+  <p>
+    You have never tracked a scorecard on Frolfr!
+  </p>
+{{else}}
   <h3 class="visible-xs text-center">
     Stats
   </h3>
   <div class='push-down'></div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="pull-right">
+        {{scorecardsStarted}}
+      </span>
+      Total Scorecards Started
+    </li>
+    <li class="list-group-item">
+      <span class="pull-right">
+        {{completedScorecards}}
+      </span>
+      Completed Scorecards Played
+    </li>
+    <li class="list-group-item">
+      <span class="pull-right">
+        {{coursesPlayed}}
+      </span>
+      Courses Played
+    </li>
+    <li class="list-group-item">
+      <span class="pull-right">
+        {{statesPlayed}}
+      </span>
+      States Played
+    </li>
+    <li class="list-group-item">
+      <span class="pull-right">
+        {{displayTopPlayedCourse}}
+      </span>
+      Favorite Course
+    </li>
+    <li class="list-group-item">
+      <span class="pull-right">
+        {{displayTopFriend}}
+      </span>
+      Best Friend
+    </li>
+  </ul>
+{{/if}}
