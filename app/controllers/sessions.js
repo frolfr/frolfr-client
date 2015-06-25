@@ -66,7 +66,7 @@ var SessionsController = Ember.Controller.extend({
 
           var nextUnplayedHole = round.get('scorecards.firstObject.nextUnplayedTurn.holeNumber');
           _this.controllerFor('application').set('currentHole', nextUnplayedHole);
-        }, function(error) {
+        }, function() {
           // Do nothing if there is no current round
         });
 
