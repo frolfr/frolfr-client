@@ -1,63 +1,23 @@
-<h2 class="text-center">
-  Profile
-</h2>
+<h2 class='text-center'>Profile</h2>
 
-<div class='push-down'></div>
-
-<form>
-  <div class="form-group">
-    <label for="firstName">
-      * First Name
-    </label>
-    {{input value=firstName type="text" id="firstName" required=true classNames="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="middleName">
-      * Middle Name
-    </label>
-    {{input value=middleName type="text" id="middleName" classNames="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="lastName">
-      * Last Name
-    </label>
-    {{input value=lastName type="text" id="lastName" required=true classNames="form-control"}}
-  </div>
-  <div class="form-group row">
-    <div class='col-xs-6'>
-      <button {{bind-attr class=":btn :btn-block :btn-success :btn-lg isDirty:active:disabled"}} type="submit" {{action "saveChanges" on="click"}}>
-        Save
-      </button>
-    </div>
-    <div class='col-xs-6'>
-      <button {{bind-attr class=":btn :btn-block :btn-danger :btn-lg isDirty:active:disabled"}} {{action "cancel" on="click"}}>
-        Cancel
-      </button>
-    </div>
-  </div>
-</form>
-
-<hr />
-
-<h2 class="text-center">
-  Avatar
-</h2>
-{{#if hasAvatar}}
-  <div class="text-center">
-    <img {{bind-attr src="avatarUrl"}} class="avatar u-circle" />
-  </div>
-{{else}}
-  <p>
-    No avatar currently uploaded. Feel free to upload one here.
-  </p>
-  {{file-upload path="api/avatars" photoUrl=model.avatarUrl}}
-{{/if}}
-
-<hr />
-
-<div class='text-center'>
-  <button {{action "logout" on="click"}} class='btn-danger btn btn-lg'>
-    Logout
-  </button>
+<div class="nav nav-pills nav-justified">
+  {{#link-to "profileStatLog" tagName="li" classNames="u-pointer"}}
+    <a>
+      <span class="hidden-xs">
+        Stats
+      </span>
+      <i class="fa fa-bar-chart visible-xs">
+      </i>
+    </a>
+  {{/link-to}}
+  {{#link-to "profile.settings" tagName="li" classNames="u-pointer"}}
+    <a>
+      <span class="hidden-xs">
+        Settings
+      </span>
+      <i class="fa fa-gear visible-xs">
+      </i>
+    </a>
+  {{/link-to}}
 </div>
-
+{{outlet}}

@@ -27,7 +27,10 @@ Router.map(function() {
     });
   });
   this.resource('friends');
-  this.resource('profile');
+  this.resource('profile', function() {
+    this.route('settings');
+    this.resource('profileStatLog', { path: '/stats' });
+  });
   this.resource('password', function() {
     this.route('reset');
     this.route('edit', { path: '/edit/:password_reset_token' });
