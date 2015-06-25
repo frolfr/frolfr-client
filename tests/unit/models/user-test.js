@@ -2,6 +2,7 @@ import {
   moduleForModel,
   test
 } from 'ember-qunit';
+import Ember from 'ember';
 
 moduleForModel('user', {
   // Specify the other units that are required for this test.
