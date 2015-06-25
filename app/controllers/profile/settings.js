@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var ProfileController = Ember.ObjectController.extend({
+var ProfileSettingsController = Ember.ObjectController.extend({
   actions: {
     saveChanges: function() {
       this.get('model').save();
@@ -12,4 +12,4 @@ var ProfileController = Ember.ObjectController.extend({
   }
 });
 
-export default ProfileController;
+export default ProfileSettingsController;
