@@ -30,7 +30,10 @@
         </div>
 
         <div class='review-body'>
-          {{review.post}}
+          <p>{{review.post}}</p>
+          {{#if review.canUpdate}}
+            <p>{{link-to 'Edit My Review' 'review.edit' review}}</p>
+          {{/if}}
         </div>
       </li>
     {{/each}}
