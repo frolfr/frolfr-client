@@ -5,6 +5,12 @@ var CourseRoundsController = Ember.ArrayController.extend({
   page: 1,
   perPage: 10,
 
+  hasRatings: function() {
+    return this.get('filteredContent').any(function(scorecard) {
+      return Ember.isPresent(scorecard.get('rating'));
+    });
+  }.property('filteredContent.@each.rating'),
+
   pagedContent: function() {
     var start = (this.get('page') - 1) * this.get('perPage');
     var end = this.get('page') * this.get('perPage');
