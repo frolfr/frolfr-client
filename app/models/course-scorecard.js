@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 var CourseScorecard = DS.Model.extend({
   createdAt: DS.attr('date'),
@@ -13,7 +14,7 @@ var CourseScorecard = DS.Model.extend({
     if (Ember.isPresent(this.get('rating'))) {
       return this.get('rating');
     } else {
-      return "N/A"
+      return "N/A";
     }
   }.property('rating'),
 
