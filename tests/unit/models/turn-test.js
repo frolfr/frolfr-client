@@ -18,7 +18,7 @@ test('scorecard relationship', function(assert) {
   assert.equal(relationship.kind, 'belongsTo');
 });
 
-test('parStatus displays abovePar if shooting < 0, atPar if shooting = 0 and belowPar if shooting is < 0', function(assert) {
+test('parStatus displays abovePar if shooting < 0', function(assert) {
   var model = this.subject({
     strokes: 3,
     par: 2
