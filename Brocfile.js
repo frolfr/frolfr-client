@@ -28,6 +28,8 @@ app.import('bower_components/highcharts/highcharts.js');
 app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
 app.import('bower_components/components-font-awesome/css/font-awesome.css');
 app.import('bower_components/ember-uploader/dist/ember-uploader.js');
+app.import('bower_components/floatThead/dist/jquery.floatThead.js');
+
 
 var fontAwesome = pickFiles('bower_components/components-font-awesome/fonts', {
     srcDir: '/',

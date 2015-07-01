@@ -19,6 +19,7 @@
     "jquery-cookie": "~1.4.1",
     "bootstrap-sass-official": "~3.3.3",
     "typeahead.js": "~0.10.5",
-    "components-font-awesome": "~4.3.0"
+    "components-font-awesome": "~4.3.0",
+    "floatThead": "~1.2.12"
   }
 }
