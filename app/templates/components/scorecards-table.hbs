@@ -24,7 +24,11 @@
   <tbody>
     {{#each holeNumber in holeNumbers}}
       <tr>
-        {{#link-to 'turns' holeNumber tagName='td' classNames='u-pointer'}}<strong>{{holeNumber}}</strong>{{/link-to}}
+        {{#if hasHoleLinks}}
+          {{#link-to 'turns' holeNumber tagName='td' classNames='u-pointer'}}<strong>{{holeNumber}}</strong>{{/link-to}}
+        {{else}}
+          <strong>{{holeNumber}}</strong>
+        {{/if}}
         {{#each scorecard in scorecards}}
           <td class='text-center'>
             {{scorecards-table-cell scorecard=scorecard holeNumber=holeNumber}}
