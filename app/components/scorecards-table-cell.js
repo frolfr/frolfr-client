@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var StrokesTableCellComponent = Ember.Component.extend({
+var ScorecardsTableCell = Ember.Component.extend({
   text: function() {
     return this.get('turn.displayStrokes');
   }.property('turn.displayStrokes'),
@@ -18,4 +18,4 @@ var StrokesTableCellComponent = Ember.Component.extend({
   }.property('scorecard.turns.@each', 'holeNumber')
 });
 
-export default StrokesTableCellComponent;
+export default ScorecardsTableCell;
