@@ -1,3 +1,14 @@
+{{nearest-courses store=store nearestCourses=nearestCourses}}
+
+{{#if nearestCourses}}
+  You lookin' for one-a these?
+  <ul>
+    {{#each nearestCourse in nearestCourses}}
+      <li class='u-pointer'><a {{action 'updateCourseInput' nearestCourse}}>{{nearestCourse.name}}</a></li>
+    {{/each}}
+  </ul>
+{{/if}}
+
 <h2 class="text-center">
   Start a New Round
 </h2>

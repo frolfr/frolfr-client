@@ -3,6 +3,7 @@ import Ember from 'ember';
 var RoundsNewController = Ember.ObjectController.extend({
   selectedPlayer: null,
   query: null,
+  nearestCourses: false,
 
   potentialPlayers: function() {
     var friends = this.get('friends');
@@ -26,6 +27,13 @@ var RoundsNewController = Ember.ObjectController.extend({
 
     removePlayer: function(player) {
       this.get('players').removeObject(player);
+    },
+
+    updateCourseInput: function(nearestCourse) {
+      var course = this.get('courses').find(function(course) {
+        return course.id === nearestCourse.id;
+      });
+      this.get('model').set('course', course);
     },
 
     createRound: function() {
