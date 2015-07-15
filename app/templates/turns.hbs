@@ -63,6 +63,10 @@
       </a>
     </div>
   {{/unless}}
+  {{#link-to 'round.settings' roundId classNames='btn btn-primary'}}
+    <i class="fa fa-gear"></i>
+    Settings
+  {{/link-to}}
   <div class="pull-right">
     <a {{action "nextHole" on="click"}} class="btn btn-success btn-lg">
       {{#if isLastHole}}

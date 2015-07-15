@@ -50,6 +50,7 @@ Router.map(function() {
   });
   this.resource('round', { path: '/rounds/:id' }, function() {
     this.resource('turns', { path: '/holes/:hole_number' });
+    this.route('settings');
   });
 });
 export default Router;
