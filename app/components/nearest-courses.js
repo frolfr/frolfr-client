@@ -16,11 +16,11 @@ export default Ember.Component.extend({
         self.set('nearestCourses', courses);
         self.set('geolocationMessage', '');
       });
-    };
+    }
 
     function error() {
       self.set('geolocationMessage', 'Unable to retrieve your location');
-    };
+    }
 
     this.set('geolocationMessage', 'Looking up local courses...');
 
