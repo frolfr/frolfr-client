@@ -3,10 +3,9 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   afterModel: function() {
     var _this = this;
-    return Ember.RSVP.Promise.all([
-      this.store.find('friend'),
-    ]).then(function(args) {
-      _this.set('friends', args[0]);
+
+    return this.store.find('friend').then(function(friends) {
+      _this.set('friends', friends);
     });
   },
 

@@ -18,13 +18,10 @@ export default Ember.Controller.extend({
 
   potentialPlayers: function() {
     var friends = this.get('friends');
-    var players = this.get('roundPlayers');
+    var player_ids = this.get('roundPlayers').getEach("id");
 
-    // TODO FIX THIS
     return friends.filter(function(friend) {
-      return players.every(function(player) {
-        return player.get('id') !== friend.get('id');
-      });
+      return !player_ids.contains(friend.get("id"));
     });
   }.property('roundPlayers.@each', 'friends.@each'),
 
