@@ -4,6 +4,10 @@ export default Ember.Controller.extend({
   selectedPlayer: null,
   query: null,
 
+  noPlayerSelected: function() {
+    return Ember.isEmpty(this.get('selectedPlayer'));
+  }.property('selectedPlayer'),
+
   roundPlayers: function() {
     return this.get('model.scorecards').map(function(scorecard){
       return scorecard.get('user');
