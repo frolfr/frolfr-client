@@ -1,5 +1,5 @@
-import FriendableUser from './friendable-user';
+import User from './user';
 
-var Friend = FriendableUser.extend();
+var Friend = User.extend();
 
 export default Friend;
