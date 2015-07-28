@@ -25,10 +25,6 @@ export default Ember.Controller.extend({
     });
   }.property('roundPlayers.@each', 'friends.@each'),
 
-  noPlayerSelected: function() {
-    return Ember.isEmpty(this.get('selectedPlayer'));
-  }.property('selectedPlayer'),
-
   actions: {
     addPlayer: function() {
       var self = this,
