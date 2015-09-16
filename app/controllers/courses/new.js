@@ -14,8 +14,7 @@ var CoursesNewController = Ember.ObjectController.extend({
           course = this.get('model');
 
       course.save().then(function() {
-        _this.transitionToRoute('index');
-        // TODO: It'd be nice to have some sort of notification
+        _this.transitionToRoute('rounds.new');
       });
     }
   }
