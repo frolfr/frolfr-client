@@ -14,6 +14,7 @@ var CoursesNewController = Ember.ObjectController.extend({
           course = this.get('model');
 
       course.save().then(function() {
+        debugger;
         _this.transitionToRoute('rounds.new');
       });
     }
