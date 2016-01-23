@@ -9,10 +9,7 @@ var PasswordEditController = Ember.ObjectController.extend({
     changePassword: function() {
       var _this = this,
           password = this.get('model'),
-          isValidPassword = User.validPassword({
-            password: this.get('password'),
-            passwordConfirmation: this.get('passwordConfirmation')
-          });
+          isValidPassword = this.get('password') === this.get('passwordConfirmation');
 
       if (isValidPassword) {
         password.save().then(function(user) {
