@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import User from '../../models/user';
 
 var PasswordEditController = Ember.ObjectController.extend({
   needs: "sessions",
