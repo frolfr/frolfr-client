@@ -10,11 +10,22 @@
     border-color: #04B45F;
   }
 
+  &.multipleBelowPar {
+    border-radius: 50%;
+    border-color: #04B45F !important;
+    border: 2px solid;
+  }
+
   &.atPar {
     border-color: transparent;
   }
 
   &.abovePar {
     border-color: #FA5858;
+  }
+
+  &.multipleAbovePar {
+    border-color: #FA5858 !important;
+    border: 2px solid;
   }
 }

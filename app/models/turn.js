@@ -10,12 +10,16 @@ var Turn = DS.Model.extend({
   parStatus: function () {
     var shooting = this.get('shooting');
 
-    if (0 < shooting) {
+    if (0 < shooting - 1) {
+      return 'multipleAbovePar';
+    } else if (0 < shooting) {
       return 'abovePar';
     } else if (shooting === 0 || !this.get('isPlayed')) {
       return 'atPar';
-    } else {
+    } else if (shooting + 1 === 0) {
       return 'belowPar';
+    } else {
+      return 'multipleBelowPar';
     }
   }.property('shooting', 'isPlayed'),
 
