@@ -1,10 +1,14 @@
 table#round {
   tbody, tfoot {
-    tr { background-color: #4e5d6c; }
-    tr:nth-child(odd) { background-color: #2b3e50; }
+    tr { background-color: #ffffff; }
+    tr:nth-child(odd) { background-color: #f9f9f9; }
   }
   thead {
-    background-color: #4e5d6c;
+    background-color: #ffffff;
+    th {
+      border-top: 0px;
+      border-bottom: 0px;
+    }
   }
   tr {
     text-align: center;
@@ -16,6 +20,10 @@ table#round {
 table.floatThead-table {
   border-top: none;
   border-bottom: none;
-  background-color: #4e5d6c;
+  background-color: #ffffff;
   font-size: 16px;
+  th {
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+  }
 }
