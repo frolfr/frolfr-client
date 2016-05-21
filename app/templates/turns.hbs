@@ -56,8 +56,8 @@
 {{/each}}
 <div class="push-down"></div>
 
-<div class="well row block-grid-xs-4">
-  <div class="block-grid-item">
+<div class="well row">
+  <div class="col-xs-3">
     {{#unless isFirstHole}}
       <a {{action "previousHole" on="click"}} class="btn btn-success btn-block">
         <i class="fa fa-chevron-left"></i>
@@ -65,21 +65,21 @@
     {{/unless}}
   </div>
 
-  <div class="block-grid-item">
+  <div class="col-xs-3">
     {{#link-to 'round.index' roundId classNames='btn btn-default btn-block'}}
       <i class="fa fa-bar-chart"></i>
       <span class="hidden-xs">Scores</span>
     {{/link-to}}
   </div>
 
-  <div class="block-grid-item">
+  <div class="col-xs-3">
     {{#link-to 'round.settings' roundId classNames='btn btn-default btn-block'}}
       <i class="fa fa-gear"></i>
       <span class="hidden-xs">Settings</span>
     {{/link-to}}
   </div>
 
-  <div class="block-grid-item">
+  <div class="col-xs-3">
     <a {{action "nextHole" on="click"}} class="btn btn-success btn-block">
       {{#if isLastHole}}
         <span>
