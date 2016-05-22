@@ -1,25 +1,9 @@
 {
   "name": "frolfr-client",
   "dependencies": {
-    "jquery": "^1.11.1",
-    "ember": "1.10.0",
-    "ember-data": "1.0.0-beta.15",
-    "ember-resolver": "~0.1.11",
-    "loader.js": "ember-cli/loader.js#1.0.1",
-    "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
-    "ember-cli-test-loader": "ember-cli-test-loader#0.1.3",
-    "ember-load-initializers": "ember-cli/ember-load-initializers#0.0.2",
-    "ember-qunit": "0.2.8",
-    "ember-qunit-notifications": "0.0.7",
-    "qunit": "~1.17.1",
-    "moment": "~2.9.0",
-    "highcharts": "~4.1.1",
-    "ember-uploader": "~0.3.4",
-    "emblem": "~0.3.18",
-    "jquery-cookie": "~1.4.1",
-    "bootstrap-sass-official": "~3.3.3",
-    "typeahead.js": "~0.10.5",
-    "components-font-awesome": "~4.3.0",
-    "floatThead": "~1.2.12"
+    "ember": "~2.5.0",
+    "ember-cli-shims": "0.1.1",
+    "ember-cli-test-loader": "0.2.2",
+    "ember-qunit-notifications": "0.1.0"
   }
 }

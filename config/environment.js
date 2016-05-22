@@ -6,12 +6,6 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    apiHost: '',
-    contentSecurityPolicy: {
-      'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
-      'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline'",
-      'img-src': "'self' https://s3.amazonaws.com http://res.cloudinary.com/frolfr/image/upload/"
-    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -46,7 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = "https://frolfr.herokuapp.com";
+
   }
 
   return ENV;
