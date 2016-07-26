@@ -1,0 +1,97 @@
+// -------------------------------------
+//
+//   Application.css.scss
+//
+// -------------------------------------
+
+
+// -------------------------------------
+//   Libraries
+// -------------------------------------
+
+@import "flatboot";
+@import "variables_and_overrides";
+@import "round-show-table";
+@import "twitter-typeahead";
+@import "block-grids";
+@import "turns";
+@import "sidebar";
+@import "par-status";
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+body {
+  padding-top: 45px;
+}
+
+.icon-red {
+  color: #C02503 !important;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
+
+.friend-avatar {
+  width: 100%;
+  height: auto;
+}
+
+#title, #welcome-title {
+  font-family: 'Poiret One', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+#title {
+  color: white;
+}
+
+.chosen-choices input { height: 37px !important; }
+.user-row { padding-bottom: 2em; }
+i.red-icon { color: red; }
+p.tap-down { padding-top: 1em; }
+.darkened { background-color: #b9b9b9 !important; }
+img { max-width: 100%; }
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#spinner {
+  position: fixed;
+  left: 45%;
+  top: 45%;
+  z-index: 100;
+  width: 10%;
+  height: auto;
+}
+
+.u-circle {
+  border-radius: 50%;
+}
+
+.total {
+  font-size: 16px;
+}
+
+.u-condensed {
+  max-width: 5em;
+  margin: 0;
+}
+
+ul.pagination > li > a {
+  z-index: 0 !important;
+  cursor: pointer;
+}
+
+.fa-star {
+  color: yellow;
+}

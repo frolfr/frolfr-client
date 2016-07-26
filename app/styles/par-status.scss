@@ -1,0 +1,31 @@
+.par-status {
+  margin: auto;
+  width: 1.5em;
+  border: 1px solid;
+  text-align: center;
+  line-height: 150%;
+
+  &.belowPar {
+    border-radius: 50%;
+    border-color: #04B45F;
+  }
+
+  &.multipleBelowPar {
+    border-radius: 50%;
+    border-color: #04B45F !important;
+    border: 2px solid;
+  }
+
+  &.atPar {
+    border-color: transparent;
+  }
+
+  &.abovePar {
+    border-color: #FA5858;
+  }
+
+  &.multipleAbovePar {
+    border-color: #FA5858 !important;
+    border: 2px solid;
+  }
+}
