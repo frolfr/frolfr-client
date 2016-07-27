@@ -7,6 +7,14 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
+  app.import('bower_components/components-font-awesome/css/font-awesome.css');
+
+  var pickFiles = require('broccoli-static-compiler');
+  var fontAwesome = pickFiles('bower_components/components-font-awesome/fonts', {
+    srcDir: '/',
+    destDir: '/fonts'
+  });
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
@@ -20,5 +28,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  return app.toTree([fontAwesome]);
 };
