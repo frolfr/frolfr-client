@@ -5,7 +5,13 @@ module.exports = function(environment) {
     modulePrefix: 'frolfr-client',
     environment: environment,
     baseURL: '/',
+    apiHost: '',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline'",
+      'img-src': "'self' https://s3.amazonaws.com http://res.cloudinary.com/frolfr/image/upload/"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,6 +26,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.apiHost = 'http://localhost:3000'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -40,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = "https://frolfr.herokuapp.com";
   }
 
   return ENV;
