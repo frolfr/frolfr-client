@@ -1,0 +1,60 @@
+<div class="well">
+  <header class="text-center">
+    <h2>
+      {{name}}
+    </h2>
+    <h4>
+      {{location}}
+    </h4>
+  </header>
+  <div class="nav nav-pills nav-justified">
+    {{#link-to "courseStatLog" tagName="li" classNames="u-pointer"}}
+      <a>
+        <span class="hidden-xs">
+          Stats
+        </span>
+        <i class="fa fa-bar-chart visible-xs">
+        </i>
+      </a>
+    {{/link-to}}
+    {{#if hasPhoto}}
+      {{#link-to "course.index" this tagName="li" classNames="u-pointer"}}
+        <a>
+          <span class="hidden-xs">
+            Photos
+          </span>
+          <i class="fa fa-camera visible-xs">
+          </i>
+        </a>
+      {{/link-to}}
+    {{/if}}
+    {{#link-to "courseRounds" tagName="li" classNames="u-pointer"}}
+      <a>
+        <span class="hidden-xs">
+          Rounds
+        </span>
+        <i class="fa fa-info-circle visible-xs">
+        </i>
+      </a>
+    {{/link-to}}
+    {{#link-to "reviews" tagName="li" classNames="u-pointer"}}
+      <a>
+        <span class="hidden-xs">
+          Reviews
+        </span>
+        <i class="fa fa-newspaper-o visible-xs">
+        </i>
+      </a>
+    {{/link-to}}
+    {{#link-to "leaderboard" tagName="li" classNames="u-pointer"}}
+      <a>
+        <span class="hidden-xs">
+          Leaderboard
+        </span>
+        <i class="fa fa-trophy visible-xs">
+        </i>
+      </a>
+    {{/link-to}}
+  </div>
+</div>
+{{outlet}}

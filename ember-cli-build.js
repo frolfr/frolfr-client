@@ -4,7 +4,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: {
+      prepend: "http://s3.amazonaws.com/frolfr-assets/"
+    }
   });
 
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');

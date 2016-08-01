@@ -1,0 +1,42 @@
+<h2 class="text-center">
+  Courses
+</h2>
+<table id="courses" class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Location
+      </th>
+      <th>
+        Last Played
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each course in content}}
+      {{#link-to "courseStatLog" course tagName="tr" classNames="u-pointer"}}
+        <td>
+          {{course.name}}
+        </td>
+        <td>
+          {{course.location}}
+        </td>
+        <td>
+          {{display-date course.lastPlayedAt}}
+        </td>
+        <td>
+          <i class="fa fa-chevron-right"></i>
+        </td>
+      {{/link-to}}
+    {{/each}}
+  </tbody>
+</table>
+
+<div class='text-center'>
+  {{page-numbers content=content}}
+</div>
