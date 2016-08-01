@@ -4,8 +4,6 @@ import {
 } from 'ember-qunit';
 import Ember from 'ember';
 
-var run = Ember.run;
-
 moduleForModel('course', {
   // Specify the other units that are required for this test.
   needs: ['model:scorecard', 'model:hole', 'model:review', 'model:photo', 'model:round', 'model:user', 'model:turn']
