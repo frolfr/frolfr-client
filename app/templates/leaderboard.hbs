@@ -21,10 +21,10 @@
     </tr>
   </thead>
   <tbody>
-    {{#each scorecard in model}}
+    {{#each model as |scorecard index|}}
       <tr>
         <td>
-          {{ranking-from-index _view.contentIndex}}
+          {{ranking-from-index index}}
         </td>
         <td>
           {{scorecard.userFullName}}
