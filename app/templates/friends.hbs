@@ -14,7 +14,7 @@
       <div class="block-grid-item">
         {{#link-to "userStatLog" friend tagName="div" classNames="u-pointer"}}
           {{#if friend.hasAvatar}}
-            <img {{bind-attr src="friend.avatarUrl"}} class="u-circle friend-avatar" />
+            <img src={{friend.avatarUrl}} class="u-circle friend-avatar" />
           {{else}}
             <img src="http://res.cloudinary.com/frolfr/image/upload/v1450881126/avatar-placeholder_n7w7z8.png" class="u-circle friend-avatar" />
           {{/if}}

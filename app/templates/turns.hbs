@@ -7,13 +7,13 @@
   </div>
   <div class="pull-right">
     <div class="btn-group pars">
-      <button {{bind-attr class=":btn :btn-default :btn-lg isPar3:darkened"}} {{action "changePar" 3 on="click"}}>
+      <button class="btn btn-default btn-lg {{if isPar3 'darkened'}}" {{action "changePar" 3 on="click"}}>
         3
       </button>
-      <button {{bind-attr class=":btn :btn-default :btn-lg isPar4:darkened"}} {{action "changePar" 4 on="click"}}>
+      <button class="btn btn-default btn-lg {{if isPar4 'darkened'}}" {{action "changePar" 4 on="click"}}>
         4
       </button>
-      <button {{bind-attr class=":btn :btn-default :btn-lg isPar5:darkened"}} {{action "changePar" 5 on="click"}}>
+      <button class="btn btn-default btn-lg {{if isPar5 'darkened'}}" {{action "changePar" 5 on="click"}}>
         5
       </button>
     </div>
@@ -23,7 +23,7 @@
   <div class="media turn-row">
     <div class="media-left media-middle">
       {{#if turn.scorecard.hasUserAvatar}}
-        <img {{bind-attr src="turn.scorecard.userAvatarUrl"}} class="media-object turns-thumbnail thumbnail u-circle" />
+        <img src={{turn.scorecard.userAvatarUrl}} class="media-object turns-thumbnail thumbnail u-circle" />
       {{else}}
         <h2 class="media-object">
           {{turn.scorecard.userInitials}}
@@ -36,7 +36,7 @@
           <i class="fa fa-minus"></i>
         </button>
         <div class="col-xs-3">
-          <h3 {{bind-attr class=":text-center turn.parStatus :par-status"}}>
+          <h3 class="text-center par-status {{turn.parStatus}}">
             {{turn.displayStrokes}}
           </h3>
         </div>

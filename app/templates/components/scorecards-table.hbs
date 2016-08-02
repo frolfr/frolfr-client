@@ -5,7 +5,7 @@
       {{#each scorecard in scorecards}}
         <th class='text-center'>
           {{#if scorecard.hasUserAvatar}}
-            <img {{bind-attr src='scorecard.userAvatarUrl'}} class='tiny-thumbnail u-circle'>
+            <img src={{scorecard.userAvatarUrl}} class='tiny-thumbnail u-circle'>
           {{else}}
             <img src='http://res.cloudinary.com/frolfr/image/upload/v1450881126/avatar-placeholder_n7w7z8.png' class='tiny-thumbnail u-circle' />
           {{/if}}

@@ -33,7 +33,7 @@
           {{auto-complete id="players" model=potentialPlayers selection=selectedPlayer value=query displayKey="fullName"}}
         </div>
         <div class="col-xs-3">
-          <button {{action 'addPlayer'}} {{bind-attr disabled="noPlayerSelected"}} class="btn btn-block btn-lg btn-success">
+          <button {{action 'addPlayer'}} disabled={{noPlayerSelected}} class="btn btn-block btn-lg btn-success">
             <i class="fa fa-plus"></i>
           </button>
         </div>
@@ -42,7 +42,7 @@
     <div class="row block-grid-xs-3 block-grid-sm-4 block-grid-lg-6">
       <div class="block-grid-item">
         {{#if currentUser.hasAvatar}}
-          <img {{bind-attr src="currentUser.avatarUrl"}} class="u-circle friend-avatar" />
+          <img src={{currentUser.avatarUrl}} class="u-circle friend-avatar" />
         {{else}}
           <img src="http://res.cloudinary.com/frolfr/image/upload/v1450881126/avatar-placeholder_n7w7z8.png" class="u-circle friend-avatar" />
         {{/if}}
@@ -53,7 +53,7 @@
       {{#each player in players}}
         <div class="block-grid-item">
           {{#if player.hasAvatar}}
-            <img {{bind-attr src="player.avatarUrl"}} class="u-circle friend-avatar" />
+            <img src={{player.avatarUrl}} class="u-circle friend-avatar" />
           {{else}}
             <img src="http://res.cloudinary.com/frolfr/image/upload/v1450881126/avatar-placeholder_n7w7z8.png" class="u-circle friend-avatar" />
           {{/if}}

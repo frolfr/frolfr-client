@@ -1,4 +1,4 @@
-<div {{bind-attr class="currentUser.isAuthenticated:main-wrapper"}}>
+<div class={{if currentUser.isAuthenticated 'main-wrapper'}}>
   {{#if currentUser.isAuthenticated}}
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
