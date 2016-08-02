@@ -40,7 +40,7 @@ export default Ember.Controller.extend({
         self.set('selectedPlayer', null);
         self.set('query', null);
         currentRound.get('scorecards').addObject(scorecard);
-        self.transitionToRoute('turns', currentRound, currentHole);
+        self.transitionToRoute('round', currentRound);
       });
     }
   }
