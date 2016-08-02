@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['application'],
-  currentHole: Ember.computed.alias('controllers.application.currentHole'),
   selectedPlayer: null,
   query: null,
 
@@ -28,8 +27,7 @@ export default Ember.Controller.extend({
   actions: {
     addPlayer: function() {
       var self = this,
-          currentRound = this.get('model'),
-          currentHole = this.get('currentHole');
+          currentRound = this.get('model');
 
       var scorecard = this.store.createRecord('scorecard', {
         round: currentRound,
