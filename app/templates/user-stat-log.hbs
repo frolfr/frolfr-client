@@ -1,27 +1,27 @@
-{{#if hasNeverPlayed}}
+{{#if model.hasNeverPlayed}}
   <p>
     This user has never tracked a scorecard on Frolfr!
   </p>
 {{else}}
   <h4 class="text-center">
-    {{firstName}}'s Stats
+    {{model.firstName}}'s Stats
   </h4>
   <ul class="list-group">
     <li class="list-group-item">
       <span class="pull-right">
-        {{totalScorecardsPlayed}}
+        {{model.totalScorecardsPlayed}}
       </span>
       Total Scorecards Played
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{completedScorecardsPlayed}}
+        {{model.completedScorecardsPlayed}}
       </span>
       Completed Scorecards Played
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{coursesPlayed}}
+        {{model.coursesPlayed}}
       </span>
       Courses Played
     </li>
@@ -32,38 +32,38 @@
   <ul class="list-group">
     <li class="list-group-item">
       <span class="pull-right">
-        {{totalRoundsWithUser}}
+        {{model.totalRoundsWithUser}}
       </span>
       Rounds Played with
-      {{firstName}}
+      {{model.firstName}}
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{totalIncompleteRounds}}
+        {{model.totalIncompleteRounds}}
       </span>
       Rounds Incomplete with
-      {{firstName}}
+      {{model.firstName}}
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{totalRoundsWon}}
+        {{model.totalRoundsWon}}
       </span>
       Rounds Won Against
-      {{firstName}}
+      {{model.firstName}}
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{totalRoundsLost}}
+        {{model.totalRoundsLost}}
       </span>
       Rounds Lost to
-      {{firstName}}
+      {{model.firstName}}
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{totalRoundsTied}}
+        {{model.totalRoundsTied}}
       </span>
       Rounds Tied with
-      {{firstName}}
+      {{model.firstName}}
     </li>
   </ul>
 {{/if}}

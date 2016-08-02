@@ -1,9 +1,9 @@
 <h2 class="text-center">
-  {{fullName}}
+  {{model.fullName}}
 </h2>
-{{#if hasAvatar}}
+{{#if model.hasAvatar}}
   <div class="text-center">
-    <img {{bind-attr src="avatarUrl"}} class="avatar u-circle" />
+    <img {{bind-attr src="model.avatarUrl"}} class="avatar u-circle" />
   </div>
 {{/if}}
 <div class="nav nav-pills nav-justified push-down">

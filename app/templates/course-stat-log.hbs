@@ -20,13 +20,13 @@
 <ul class="list-group">
   <li class="list-group-item">
     <span class="pull-right">
-      {{totalScorecardsPlayed}}
+      {{model.totalScorecardsPlayed}}
     </span>
     Total Scorecards Played
   </li>
   <li class="list-group-item">
     <span class="pull-right">
-      {{completedScorecardsPlayed}}
+      {{model.completedScorecardsPlayed}}
     </span>
     Completed Scorecards Played
   </li>
@@ -35,13 +35,13 @@
 <ul class="list-group">
   <li class="list-group-item">
     <span class="pull-right">
-    {{display-score displayAverageScore}}
+    {{display-score model.displayAverageScore}}
     </span>
     Average Score
   </li>
   <li class="list-group-item">
     <span class="pull-right">
-    {{display-score bestScore}}
+    {{display-score model.bestScore}}
     </span>
     Best Score
   </li>
@@ -50,13 +50,13 @@
 <ul class="list-group">
   <li class="list-group-item">
     <span class="pull-right">
-      {{displayAverageStrokes}}
+      {{model.displayAverageStrokes}}
     </span>
     Average Strokes
   </li>
   <li class="list-group-item">
     <span class="pull-right">
-      {{bestStrokes}}
+      {{model.bestStrokes}}
     </span>
     Best Strokes
   </li>
@@ -68,4 +68,4 @@
 <div class="chart">
 </div>
 
-{{shot-breakdown-chart pars=totalPars birdies=totalBirdies bogeys=totalBogeys eagles=totalEagles doubles=totalDoublesOrWorse}}
+{{shot-breakdown-chart pars=model.totalPars birdies=model.totalBirdies bogeys=model.totalBogeys eagles=model.totalEagles doubles=model.totalDoublesOrWorse}}
