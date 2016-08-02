@@ -3,7 +3,7 @@
 {{#if nearestCourses}}
   You lookin' for one-a these?
   <ul>
-    {{#each nearestCourse in nearestCourses}}
+    {{#each nearestCourses as |nearestCourse|}}
       <li class='u-pointer'><a {{action 'updateCourseInput' nearestCourse}}>{{nearestCourse.name}}</a></li>
     {{/each}}
   </ul>
@@ -50,7 +50,7 @@
           {{currentUser.fullName}}
         </div>
       </div>
-      {{#each player in players}}
+      {{#each players as |player|}}
         <div class="block-grid-item">
           {{#if player.hasAvatar}}
             <img src={{player.avatarUrl}} class="u-circle friend-avatar" />

@@ -19,7 +19,7 @@
     </div>
   </div>
 </div>
-{{#each turn in controller}}
+{{#each controller as |turn|}}
   <div class="media turn-row">
     <div class="media-left media-middle">
       {{#if turn.scorecard.hasUserAvatar}}

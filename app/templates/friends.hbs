@@ -10,7 +10,7 @@
 </h2>
 {{#if pagedContent}}
   <div class="row block-grid-xs-3 block-grid-sm-4 block-grid-lg-6">
-    {{#each friend in pagedContent}}
+    {{#each pagedContent as |friend|}}
       <div class="block-grid-item">
         {{#link-to "userStatLog" friend tagName="div" classNames="u-pointer"}}
           {{#if friend.hasAvatar}}

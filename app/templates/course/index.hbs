@@ -3,7 +3,7 @@
 </h3>
 <div class="text-center">
   {{#if hasPhoto}}
-    {{#each photo in photos}}
+    {{#each photos as |photo|}}
       <div class='row'>
         <img src={{photo.url}} class="img-thumbnail" />
         <p>{{display-date photo.takenAt}}</p>

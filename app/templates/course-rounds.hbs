@@ -32,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        {{#each scorecard in pagedContent}}
+        {{#each pagedContent as |scorecard|}}
           {{#link-to "round" scorecard.roundId tagName="tr" classNames="u-pointer"}}
             <td>
               {{display-date scorecard.createdAt}}
