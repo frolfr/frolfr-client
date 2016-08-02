@@ -1,4 +1,4 @@
-{{#if hasNeverPlayed}}
+{{#if model.hasNeverPlayed}}
   <p>
     You have never tracked a scorecard on Frolfr!
   </p>
@@ -10,37 +10,37 @@
   <ul class="list-group">
     <li class="list-group-item">
       <span class="pull-right">
-        {{scorecardsStarted}}
+        {{model.scorecardsStarted}}
       </span>
       Total Scorecards Started
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{completedScorecards}}
+        {{model.completedScorecards}}
       </span>
       Completed Scorecards Played
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{coursesPlayed}}
+        {{model.coursesPlayed}}
       </span>
       Courses Played
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{statesPlayed}}
+        {{model.statesPlayed}}
       </span>
       States Played
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{displayTopPlayedCourse}}
+        {{model.displayTopPlayedCourse}}
       </span>
       Favorite Course
     </li>
     <li class="list-group-item">
       <span class="pull-right">
-        {{displayTopFriend}}
+        {{model.displayTopFriend}}
       </span>
       Best Friend
     </li>
