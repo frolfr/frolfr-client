@@ -13,12 +13,12 @@
 
   <div class="form-group row">
     <div class='col-xs-6'>
-      <button {{bind-attr class=":btn :btn-block :btn-success :btn-lg isDirty:active:disabled"}} type="submit" {{action "saveChanges" on="click"}}>
+      <button class="btn btn-block btn-success btn-lg {{if isDirty 'active' 'disabled'}}" type="submit" {{action "saveChanges" on="click"}}>
         Save
       </button>
     </div>
     <div class='col-xs-6'>
-      <button {{bind-attr class=":btn :btn-block :btn-danger :btn-lg isDirty:active:disabled"}} {{action "cancel" on="click"}}>
+      <button class="btn btn-block btn-danger btn-lg {{if isDirty 'active' 'disabled'}}" {{action "cancel" on="click"}}>
         Cancel
       </button>
     </div>

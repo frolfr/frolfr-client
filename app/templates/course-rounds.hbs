@@ -9,17 +9,17 @@
         <tr>
           <th {{action "sortBy" "createdAt"}}>
             Date Played
-            <i {{bind-attr class="sortCreatedAt"}}>
+            <i class={{sortCreatedAt}}>
             </i>
           </th>
           <th {{action "sortBy" "totalStrokes"}}>
             Strokes
-            <i {{bind-attr class="sortTotalStrokes"}}>
+            <i class={{sortTotalStrokes}}>
             </i>
           </th>
           <th {{action "sortBy" "totalScore"}}>
             Score
-            <i {{bind-attr class="sortTotalScore"}}>
+            <i class={{sortTotalScore}}>
             </i>
           </th>
           {{#if hasRatings}}
@@ -32,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        {{#each scorecard in pagedContent}}
+        {{#each pagedContent as |scorecard|}}
           {{#link-to "round" scorecard.roundId tagName="tr" classNames="u-pointer"}}
             <td>
               {{display-date scorecard.createdAt}}

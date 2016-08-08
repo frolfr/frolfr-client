@@ -3,7 +3,7 @@
     {{auto-complete model=controller selection=selection value=query displayKey="fullName" class="larger-input"}}
   </div>
   <div class="col-xs-3">
-    <button {{action 'addFriend'}} {{bind-attr disabled="noUserSelected"}} class="btn btn-block btn-lg btn-success">
+    <button {{action 'addFriend'}} disabled="{{noUserSelected}}" class="btn btn-block btn-lg btn-success">
       <i class="fa fa-plus"></i>
     </button>
   </div>

@@ -18,7 +18,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each course in content}}
+    {{#each content as |course|}}
       {{#link-to "courseStatLog" course tagName="tr" classNames="u-pointer"}}
         <td>
           {{course.name}}
