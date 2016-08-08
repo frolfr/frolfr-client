@@ -7,6 +7,6 @@
     </div>
   </div>
 </div>
-<button {{action "addPlayer"}} {{bind-attr class=":btn :btn-block :btn-lg :btn-primary noPlayerSelected:disabled"}}>
+<button {{action "addPlayer"}} class="btn btn-block btn-lg btn-primary {{if noPlayerSelected 'disabled'}}">
   Add a Player!
 </button>

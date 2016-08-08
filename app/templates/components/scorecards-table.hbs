@@ -2,10 +2,10 @@
   <thead>
     <tr>
       <th></th>
-      {{#each scorecard in scorecards}}
+      {{#each scorecards as |scorecard|}}
         <th class='text-center'>
           {{#if scorecard.hasUserAvatar}}
-            <img {{bind-attr src='scorecard.userAvatarUrl'}} class='tiny-thumbnail u-circle'>
+            <img src={{scorecard.userAvatarUrl}} class='tiny-thumbnail u-circle'>
           {{else}}
             <img src='http://res.cloudinary.com/frolfr/image/upload/v1450881126/avatar-placeholder_n7w7z8.png' class='tiny-thumbnail u-circle' />
           {{/if}}
@@ -14,7 +14,7 @@
     </tr>
     <tr>
       <th></th>
-      {{#each scorecard in scorecards}}
+      {{#each scorecards as |scorecard|}}
         <th class='text-center'>
           <strong>{{scorecard.userInitials}}</strong>
         </th>
@@ -22,14 +22,14 @@
     </tr>
   </thead>
   <tbody>
-    {{#each holeNumber in holeNumbers}}
+    {{#each holeNumbers as |holeNumber|}}
       <tr>
         {{#if hasHoleLinks}}
           {{#link-to 'turns' holeNumber tagName='td' classNames='u-pointer'}}<strong>{{holeNumber}}</strong>{{/link-to}}
         {{else}}
           <strong>{{holeNumber}}</strong>
         {{/if}}
-        {{#each scorecard in scorecards}}
+        {{#each scorecards as |scorecard|}}
           <td class='text-center'>
             {{scorecards-table-cell scorecard=scorecard holeNumber=holeNumber}}
           </td>
@@ -40,7 +40,7 @@
   <tfoot>
     <tr>
       <td><strong>T</strong></td>
-      {{#each scorecard in scorecards}}
+      {{#each scorecards as |scorecard|}}
         <td class='text-center'>
           {{scorecard.totalStrokes}}
         </td>
@@ -48,7 +48,7 @@
     </tr>
     <tr>
       <td><strong>+ / -</strong></td>
-      {{#each scorecard in scorecards}}
+      {{#each scorecards as |scorecard|}}
         <td class='text-center'>
           {{scorecard.formattedShooting}}
         </td>
