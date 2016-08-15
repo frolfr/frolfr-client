@@ -43,13 +43,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-You'll need to set up `deploy.json` and put in your app's main directory.
-
-* `ember deploy --environment production`
-* `ember deploy:activate --revision frolfr-client:REVISION_SHA  --environment production`
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
