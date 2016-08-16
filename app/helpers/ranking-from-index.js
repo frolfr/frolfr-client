@@ -1,5 +1,5 @@
 import Ember from 'ember';
 
-export default Ember.Handlebars.makeBoundHelper(function(index) {
+export default Ember.Helper.helper(function([index]) {
   return index + 1 + ".";
 });
