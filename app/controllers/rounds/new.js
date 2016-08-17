@@ -11,7 +11,7 @@ var RoundsNewController = Ember.Controller.extend({
     players.forEach(function(p) { friends.removeObject(p); });
 
     return friends;
-  }.property('friends.@each', 'model.players.@each'),
+  }.property('friends.[]', 'model.players.[]'),
 
 
   noPlayerSelected: function() {

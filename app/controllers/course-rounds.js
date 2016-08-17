@@ -17,7 +17,7 @@ var CourseRoundsController = Ember.ArrayController.extend({
     var end = this.get('page') * this.get('perPage');
 
     return this.get('filteredContent').slice(start, end);
-  }.property('filteredContent.@each', 'page', 'perPage'),
+  }.property('filteredContent.[]', 'page', 'perPage'),
 
   isPaginated: function() {
     return this.get('filteredContent').length > this.get('perPage');
@@ -48,7 +48,7 @@ var CourseRoundsController = Ember.ArrayController.extend({
     } else {
       return this.get('completedScorecards');
     }
-  }.property('arrangedContent.@each', 'includeIncompleteScorecards', 'completedScorecards.@each'),
+  }.property('arrangedContent.[]', 'includeIncompleteScorecards', 'completedScorecards.[]'),
 
   completedScorecards: function() {
     return this.get('arrangedContent').filter(function(scorecard) {
