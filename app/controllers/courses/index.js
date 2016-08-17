@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var CoursesIndexController = Ember.ArrayController.extend({
+var CoursesIndexController = Ember.Controller.extend({
   queryParams: ["page"],
 
   pageBinding: "content.page",

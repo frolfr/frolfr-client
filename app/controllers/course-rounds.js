@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+// TODO: Change to just Controller
 var CourseRoundsController = Ember.ArrayController.extend({
   // Pagination
   page: 1,
