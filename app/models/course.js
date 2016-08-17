@@ -12,7 +12,6 @@ var Course = DS.Model.extend({
     scorecards: DS.hasMany('scorecard', { async: true }),
     holes: DS.hasMany('hole', { async: true }),
     holeCount: DS.attr('number'),
-    reviews: DS.hasMany('review', { async: true }),
     photos: DS.hasMany('photo', {async: true}),
 
     isApproved: function() {

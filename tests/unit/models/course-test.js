@@ -6,7 +6,7 @@ import Ember from 'ember';
 
 moduleForModel('course', {
   // Specify the other units that are required for this test.
-  needs: ['model:scorecard', 'model:hole', 'model:review', 'model:photo', 'model:round', 'model:user', 'model:turn']
+  needs: ['model:scorecard', 'model:hole', 'model:photo', 'model:round', 'model:user', 'model:turn']
 });
 
 test('isApproved correctly checks status', function(assert) {
@@ -29,14 +29,6 @@ test('holes relationship', function(assert) {
   var relationship = Ember.get(model, 'relationshipsByName').get('holes');
 
   assert.equal(relationship.key, 'holes');
-  assert.equal(relationship.kind, 'hasMany');
-});
-
-test('reviews relationship', function(assert) {
-  var model = this.store().modelFor('course');
-  var relationship = Ember.get(model, 'relationshipsByName').get('reviews');
-
-  assert.equal(relationship.key, 'reviews');
   assert.equal(relationship.kind, 'hasMany');
 });
 
