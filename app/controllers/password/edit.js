@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var PasswordEditController = Ember.ObjectController.extend({
+var PasswordEditController = Ember.Controller.extend({
   needs: "sessions",
   showPasswordError: false,
 
@@ -8,12 +8,13 @@ var PasswordEditController = Ember.ObjectController.extend({
     changePassword: function() {
       var _this = this,
           password = this.get('model'),
-          isValidPassword = this.get('password') === this.get('passwordConfirmation');
+          isValidPassword = password.get('password') === password.get('passwordConfirmation');
 
       if (isValidPassword) {
         password.save().then(function(user) {
           var email = user.get('email'),
-              password = _this.get('password');
+              password = user.get('password');
+
           _this.get('controllers.sessions').send('loginWithCredentials', email, password);
         });
       } else {

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var UsersNewController = Ember.ObjectController.extend({
+var UsersNewController = Ember.Controller.extend({
   needs: "sessions",
 
   actions: {
@@ -9,9 +9,9 @@ var UsersNewController = Ember.ObjectController.extend({
           user = this.get('model');
 
       if (user.get('hasValidPassword')) {
-        user.save().then(function() {
-          var email = self.get('email'),
-              password = self.get('password');
+        user.save().then(function(user) {
+          var email = user.get('email'),
+              password = user.get('password');
 
           self.get('controllers.sessions').send("loginWithCredentials", email, password);
         });

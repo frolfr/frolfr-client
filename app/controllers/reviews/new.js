@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var ReviewsNewController = Ember.ObjectController.extend({
+var ReviewsNewController = Ember.Controller.extend({
 
   ratingChoices: [1,2,3,4,5,6,7,8,9,10],
 

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var CoursesNewController = Ember.ObjectController.extend({
+var CoursesNewController = Ember.Controller.extend({
   stateAbbreviations: ["","AK","AL","AR","AZ","CA","CO",
     "CT","DC","DE","FL","GA","GU","HI","IA","ID","IL",
     "IN","KS","KY","LA","MA","MD","ME","MH","MI","MN",

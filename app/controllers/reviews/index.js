@@ -15,7 +15,7 @@ var ReviewsIndexController = Ember.ArrayController.extend({
 
   isAlreadyReviewed: function () {
     var currentUserId = this.get('currentUser.id'),
-        currentUserReview = this.get('content').findBy('user.id', currentUserId);
+        currentUserReview = this.get('content').findBy('model.user.id', currentUserId);
 
     return !!currentUserReview;
   }.property('content'),

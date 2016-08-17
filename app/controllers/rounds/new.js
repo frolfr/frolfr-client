@@ -1,17 +1,17 @@
 import Ember from 'ember';
 
-var RoundsNewController = Ember.ObjectController.extend({
+var RoundsNewController = Ember.Controller.extend({
   selectedPlayer: null,
   query: null,
   nearestCourses: false,
 
   potentialPlayers: function() {
     var friends = this.get('friends');
-    var players = this.get('players');
+    var players = this.get('model.players');
     players.forEach(function(p) { friends.removeObject(p); });
 
     return friends;
-  }.property('friends.@each', 'players.@each'),
+  }.property('friends.@each', 'model.players.@each'),
 
 
   noPlayerSelected: function() {
@@ -20,13 +20,13 @@ var RoundsNewController = Ember.ObjectController.extend({
 
   actions: {
     addPlayer: function() {
-      this.get('players').addObject(this.get('selectedPlayer'));
+      this.get('model.players').addObject(this.get('selectedPlayer'));
       this.set('selectedPlayer', null);
       this.set('query', null);
     },
 
     removePlayer: function(player) {
-      this.get('players').removeObject(player);
+      this.get('model.players').removeObject(player);
     },
 
     updateCourseInput: function(nearestCourse) {
