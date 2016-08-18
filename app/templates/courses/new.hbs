@@ -19,7 +19,11 @@
       <label for="state">
         * State
       </label>
-      {{view "select" content=stateAbbreviations value=model.state required=true classNames="form-control"}}
+      {{#x-select value=model.state required=true id='state' classNames='form-control'}}
+        {{#each stateAbbreviations as |state|}}
+          {{#x-option value=state}}{{state}}{{/x-option}}
+        {{/each}}
+      {{/x-select}}
     </div>
     <div class="form-group">
       <label for="holeCount">

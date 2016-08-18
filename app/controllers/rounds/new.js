@@ -38,7 +38,7 @@ var RoundsNewController = Ember.Controller.extend({
 
     createRound: function() {
       var _this = this;
-      this.set('model.course', this.get('model.course.content'));
+
       this.get('model').save().then(function(round) {
         _this.controllerFor('application').set('currentRound', round);
         _this.controllerFor('application').set('currentHole', '1');
