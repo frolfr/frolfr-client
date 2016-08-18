@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var TurnsController = Ember.ArrayController.extend({
+var TurnsController = Ember.Controller.extend({
   holeNumber: Ember.computed.alias('model.firstObject.holeNumber'),
 
   holePar: Ember.computed.alias('model.firstObject.par'),

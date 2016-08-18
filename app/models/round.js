@@ -6,7 +6,6 @@ var Round = DS.Model.extend({
   scorecards: DS.hasMany('scorecard', {async: true}),
   course: DS.belongsTo('course', {async: true}),
   holeCount: DS.attr('string'),
-  publicRecap: DS.attr('boolean'),
 
   isStarted: function() {
     return this.get('scorecards').any(function (scorecard) {

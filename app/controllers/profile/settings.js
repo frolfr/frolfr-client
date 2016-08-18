@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var ProfileSettingsController = Ember.ObjectController.extend({
+var ProfileSettingsController = Ember.Controller.extend({
   actions: {
     saveChanges: function() {
       this.get('model').save();

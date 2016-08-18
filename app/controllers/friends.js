@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import pagedArray from 'ember-cli-pagination/computed/paged-array';
 
-var FriendsController = Ember.ArrayController.extend({
+var FriendsController = Ember.Controller.extend({
   pagedContent: pagedArray("content", {infinite: true}),
 
   hasNextPage: function() {

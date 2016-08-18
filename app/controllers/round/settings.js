@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
     return friends.filter(function(friend) {
       return !player_ids.contains(friend.get("id"));
     });
-  }.property('roundPlayers.@each', 'friends.@each'),
+  }.property('roundPlayers.[]', 'friends.[]'),
 
   actions: {
     addPlayer: function() {

@@ -7,25 +7,25 @@
       <label for="firstName">
         * First Name
       </label>
-      {{input value=firstName type="text" id="firstName" required=true classNames="form-control"}}
+      {{input value=model.firstName type="text" id="firstName" required=true classNames="form-control"}}
     </div>
     <div class="form-group">
       <label for="middleName">
         Middle Name
       </label>
-      {{input value=middleName type="text" id="middleName" classNames="form-control"}}
+      {{input value=model.middleName type="text" id="middleName" classNames="form-control"}}
     </div>
     <div class="form-group">
       <label for="lastName">
         * Last Name
       </label>
-      {{input value=lastName type="text" id="lastName" required=true classNames="form-control"}}
+      {{input value=model.lastName type="text" id="lastName" required=true classNames="form-control"}}
     </div>
     <div class="form-group">
       <label for="email">
         * Email
       </label>
-      {{input value=email type="text" id="email" required=true classNames="form-control"}}
+      {{input value=model.email type="text" id="email" required=true classNames="form-control"}}
       {{#each model.errors.email as |error|}}
         <div class="error">
           {{error.message}}
@@ -36,13 +36,13 @@
       <label for="password">
         * Password
       </label>
-      {{input value=password type="password" id="password" required=true classNames="form-control"}}
+      {{input value=model.password type="password" id="password" required=true classNames="form-control"}}
     </div>
     <div class="form-group">
       <label for="passwordConfirmation">
         * Password Confirmation
       </label>
-      {{input value=passwordConfirmation type="password" id="passwordConfirmation" required=true classNames="form-control"}}
+      {{input value=model.passwordConfirmation type="password" id="passwordConfirmation" required=true classNames="form-control"}}
     </div>
     {{#if showPasswordError}}
       <p>
