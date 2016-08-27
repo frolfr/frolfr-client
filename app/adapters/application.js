@@ -1,9 +1,7 @@
-import DS from 'ember-data';
+import ActiveModelAdapter from 'active-model-adapter';
 
-// Override the default adapter with the `DS.ActiveModelAdapter` which
+// Override the default adapter with the `ActiveModelAdapter` which
 // is built to work nicely with the ActiveModel::Serializers gem.
-var ApplicationAdapter = DS.ActiveModelAdapter.extend({
+export default ActiveModelAdapter.extend({
   coalesceFindRequests: true
 });
-
-export default ApplicationAdapter;
