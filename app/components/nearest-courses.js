@@ -12,7 +12,7 @@ export default Ember.Component.extend({
       var latitude  = position.coords.latitude,
           longitude = position.coords.longitude;
 
-      self.store.find('nearestCourse', {latitude: latitude, longitude: longitude}).then(function(courses) {
+      self.store.query('nearestCourse', {latitude: latitude, longitude: longitude}).then(function(courses) {
         self.set('nearestCourses', courses);
         self.set('geolocationMessage', '');
       });
