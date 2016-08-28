@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  didInsertElement: function() {
+  init() {
     var self = this;
 
     if (!navigator.geolocation){
