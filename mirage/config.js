@@ -6,50 +6,81 @@ export default function() {
   this.namespace = 'api';
 
   // authentication
-  this.post('/authorizations', (schema, request) => {
-    console.log('/authorizations');
-    // if (request.requestBody === 'email=dev%40frolfr.com&password=password') {
-    //   return { token: faker.random.uuid() };
-    // } else {
-    //   return new Mirage.Response(422, {}, {});
-    // }
+  this.post('/authorizations', () => {
     return { token: faker.random.uuid() };
   });
 
   // current user
   this.get('/users/current', (schema/*, request*/) => {
-    console.log('/users/current');
-    return schema.db.users.find(1);
+    const user = schema.db.users.find(1);
+    return {
+      user
+    };
   });
 
-  // current round
-  this.get('/rounds/current', (schema/*, request*/) => {
-    console.log('/rounds/current');
-    return schema.db.rounds.find(1);
+  // rounds
+  this.get('/rounds', (schema/*, request*/) => {
+    const rounds = schema.db.rounds;
+    return {
+      rounds
+    };
+  });
+
+  this.get('/rounds/:id', (schema, request) => {
+    const round = schema.db.round.find(request.params.id);
+    return {
+      round
+    };
+  });
+
+  this.get('/rounds/current', () => {
+    return null;
   });
 
   // courses
   this.get('/courses', (schema/*, request*/) => {
-    console.log('/courses');
-    return schema.db.courses;
+    const courses = schema.db.courses;
+    return {
+      courses
+    };
+  });
+
+  this.get('/courses/:id', (schema, request) => {
+    const course = schema.db.courses.find(request.params.id);
+    return {
+      course
+    };
   });
 
   this.get('/available_courses', (schema/*, request*/) => {
-    console.log('/available_courses');
-    return schema.db.courses;
+    const availableCourses = schema.db.courses;
+    return {
+      availableCourses
+    };
   });
 
+  this.get('/nearest_courses', {}, 200);
+
   // scorecards
-  this.get('/scorecards', (schema/*, request*/) => {
-    console.log('/scorecards');
-    return schema.db.scorecards.find(554);
+  this.get('/scorecards/:id', (schema/*, request*/) => {
+    const scorecard = schema.db.scorecards.find(554);
+    return {
+      scorecard
+    };
   });
 
   // holes
   this.get('/holes', (schema/*, request*/) => {
-    console.log('/holes');
-    return schema.db.holes;
+    const holes = schema.db.holes;
+    return {
+      holes
+    };
   });
 
-  this.get('/friends', null, 200);
+  this.get('/friends', (schema/*, request*/) => {
+    const friends = schema.db.friends;
+    return {
+      friends
+    };
+  });
 }
