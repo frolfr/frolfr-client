@@ -16,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each round in model}}
+      {{#each model as |round|}}
         {{#link-to "round" round.id tagName="tr" classNames="u-pointer"}}
           <td>
             {{round.courseName}}

@@ -1,21 +1,21 @@
 import Ember from 'ember';
 
-var RoundIndexController = Ember.ObjectController.extend({
+var RoundIndexController = Ember.Controller.extend({
   columnWidth: function() {
-    var scorecardColumns = this.get('scorecards.length');
+    var scorecardColumns = this.get('model.scorecards.length');
     var scorecardColumnPercentage = 100 / scorecardColumns;
 
     return 'width: ' + scorecardColumnPercentage + '%;';
-  }.property('scorecards.length'),
+  }.property('model.scorecards.length'),
 
   holeNumbers: function() {
-    var turnsCount = this.get('scorecards.firstObject.turns.length');
+    var turnsCount = this.get('model.scorecards.firstObject.turns.length');
     var holeNumbers = new Array(turnsCount)
       .join().split(',')
       .map(function(item, index){ return ++index; });
 
     return holeNumbers;
-  }.property('scorecards.firstObject.turns.length')
+  }.property('model.scorecards.firstObject.turns.length')
 
 });
 

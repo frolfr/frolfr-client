@@ -15,7 +15,7 @@ var ScorecardsTableCell = Ember.Component.extend({
     return this.get('scorecard').get('turns').find(function(turn) {
       return turn.get('holeNumber') === holeNumber;
     });
-  }.property('scorecard.turns.@each', 'holeNumber')
+  }.property('scorecard.turns.[]', 'holeNumber')
 });
 
 export default ScorecardsTableCell;

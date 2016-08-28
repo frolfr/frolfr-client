@@ -7,7 +7,6 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('welcome');
-  this.resource('publicRound', { path: '/public/rounds/:id' });
   this.resource('sessions', function() {
     this.route('login');
   });
@@ -19,12 +18,6 @@ Router.map(function() {
     this.resource('courseRounds', { path: '/rounds' });
     this.resource('courseStatLog', { path: '/stats' });
     this.resource('holeStatLogs', { path: '/holes' });
-    this.resource('reviews', function() {
-      this.route('new');
-    });
-    this.resource('review', { path: '/reviews/:review_id' }, function() {
-      this.route('edit');
-    });
   });
   this.resource('friends');
   this.resource('profile', function() {

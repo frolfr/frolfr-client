@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var FriendableUsersController = Ember.ArrayController.extend({
+var FriendableUsersController = Ember.Controller.extend({
   selection: null,
   query: null,
 
