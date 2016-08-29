@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "active-model-adapter": "2.1.1",
     "broccoli-asset-rev": "^2.2.0",
     "broccoli-sass": "^0.6.0",
     "broccoli-static-compiler": "^0.2.1",

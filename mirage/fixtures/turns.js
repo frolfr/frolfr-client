@@ -1,0 +1,127 @@
+export default [{
+  "id": 9568,
+  "strokes": 4,
+  "par": 3,
+  "hole_number": 1,
+  "scorecard_id": 554,
+  "hole_id": 1005
+}, {
+  "id": 9569,
+  "strokes": 2,
+  "par": 3,
+  "hole_number": 2,
+  "scorecard_id": 554,
+  "hole_id": 1006
+}, {
+  "id": 9570,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 3,
+  "scorecard_id": 554,
+  "hole_id": 1007
+}, {
+  "id": 9571,
+  "strokes": 4,
+  "par": 4,
+  "hole_number": 4,
+  "scorecard_id": 554,
+  "hole_id": 1008
+}, {
+  "id": 9572,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 5,
+  "scorecard_id": 554,
+  "hole_id": 1009
+}, {
+  "id": 9573,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 6,
+  "scorecard_id": 554,
+  "hole_id": 1010
+}, {
+  "id": 9574,
+  "strokes": 2,
+  "par": 3,
+  "hole_number": 7,
+  "scorecard_id": 554,
+  "hole_id": 1011
+}, {
+  "id": 9575,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 8,
+  "scorecard_id": 554,
+  "hole_id": 1012
+}, {
+  "id": 9576,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 9,
+  "scorecard_id": 554,
+  "hole_id": 1013
+}, {
+  "id": 9577,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 10,
+  "scorecard_id": 554,
+  "hole_id": 1014
+}, {
+  "id": 9578,
+  "strokes": 2,
+  "par": 3,
+  "hole_number": 11,
+  "scorecard_id": 554,
+  "hole_id": 1015
+}, {
+  "id": 9579,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 12,
+  "scorecard_id": 554,
+  "hole_id": 1016
+}, {
+  "id": 9580,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 13,
+  "scorecard_id": 554,
+  "hole_id": 1017
+}, {
+  "id": 9581,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 14,
+  "scorecard_id": 554,
+  "hole_id": 1018
+}, {
+  "id": 9582,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 15,
+  "scorecard_id": 554,
+  "hole_id": 1019
+}, {
+  "id": 9583,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 16,
+  "scorecard_id": 554,
+  "hole_id": 1020
+}, {
+  "id": 9584,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 17,
+  "scorecard_id": 554,
+  "hole_id": 1021
+}, {
+  "id": 9585,
+  "strokes": 3,
+  "par": 3,
+  "hole_number": 18,
+  "scorecard_id": 554,
+  "hole_id": 1022
+}];
